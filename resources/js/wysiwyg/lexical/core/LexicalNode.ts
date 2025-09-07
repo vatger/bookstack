@@ -175,7 +175,7 @@ export type NodeKey = string;
 
 export class LexicalNode {
   // Allow us to look up the type including static props
-  ['constructor']!: KlassConstructor<typeof LexicalNode>;
+  declare ['constructor']: KlassConstructor<typeof LexicalNode>;
   /** @internal */
   __type: string;
   /** @internal */
@@ -381,6 +381,14 @@ export class LexicalNode {
       }
     }
     return isSelected;
+  }
+
+    /**
+     * Indicate if this node should be selected directly instead of the default
+     * where the selection would descend to the nearest initial child element.
+     */
+  shouldSelectDirectly(): boolean {
+      return false;
   }
 
   /**

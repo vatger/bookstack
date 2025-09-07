@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'This will delete the uploaded import ZIP file, and cannot be undone.',
     'import_errors' => 'Import Errors',
     'import_errors_desc' => 'The follow errors occurred during the import attempt:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Permissões',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Inserir Desenho',
     'pages_md_show_preview' => 'Mostrar pré-visualização',
     'pages_md_sync_scroll' => 'Sincronizar pré-visualização',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Encontrado um rascunho não guardado',
     'pages_drawing_unsaved_confirm' => 'Dados de um rascunho não guardado foi encontrado de um tentativa anteriormente falhada. Deseja restaurar e continuar a edição desse rascunho?',
     'pages_not_in_chapter' => 'A página não está dentro de um capítulo',

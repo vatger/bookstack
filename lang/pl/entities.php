@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'This will delete the uploaded import ZIP file, and cannot be undone.',
     'import_errors' => 'Import Errors',
     'import_errors_desc' => 'The follow errors occurred during the import attempt:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Uprawnienia',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Wstaw rysunek',
     'pages_md_show_preview' => 'Pokaż podgląd',
     'pages_md_sync_scroll' => 'Synchronizuj przewijanie podglądu',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Znaleziono niezapisany rysunek',
     'pages_drawing_unsaved_confirm' => 'Znaleziono niezapisane dane rysowania z poprzedniej nieudanej próby zapisu. Czy chcesz przywrócić i kontynuować edycję tego niezapisanego rysunku?',
     'pages_not_in_chapter' => 'Strona nie została umieszczona w rozdziale',

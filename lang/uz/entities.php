@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'This will delete the uploaded import ZIP file, and cannot be undone.',
     'import_errors' => 'Import Errors',
     'import_errors_desc' => 'The follow errors occurred during the import attempt:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Huquqlar',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Chizma kiritish',
     'pages_md_show_preview' => 'Ko‘rish',
     'pages_md_sync_scroll' => 'Sinxronizatsiyani oldindan ko\'rish aylantirish',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Saqlanmagan chizma topildi',
     'pages_drawing_unsaved_confirm' => 'Saqlanmagan chizma maʼlumotlari avvalgi muvaffaqiyatsiz chizmani saqlash urinishidan topildi. Ushbu saqlanmagan chizmani qayta tiklash va tahrirlashni davom ettirmoqchimisiz?',
     'pages_not_in_chapter' => 'Sahifa bir bobda emas',

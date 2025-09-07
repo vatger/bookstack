@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'This will delete the uploaded import ZIP file, and cannot be undone.',
     'import_errors' => 'Import Errors',
     'import_errors_desc' => 'The follow errors occurred during the import attempt:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Jogosultságok',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Rajz beillesztése',
     'pages_md_show_preview' => 'Előnézet megjelenítése',
     'pages_md_sync_scroll' => 'Előnézet pozíció szinkronizálása',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Nem mentett rajz található',
     'pages_drawing_unsaved_confirm' => 'A rendszer nem mentett rajzadatokat talált egy korábbi sikertelen rajzmentési kísérletből. Szeretné visszaállítani és folytatni a nem mentett rajz szerkesztését?',
     'pages_not_in_chapter' => 'Az oldal nincs fejezetben',
