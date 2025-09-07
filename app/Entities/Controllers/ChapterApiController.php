@@ -2,6 +2,7 @@
 
 namespace BookStack\Entities\Controllers;
 
+use BookStack\Entities\Models\Book;
 use BookStack\Entities\Models\Chapter;
 use BookStack\Entities\Queries\ChapterQueries;
 use BookStack\Entities\Queries\EntityQueries;
@@ -9,12 +10,11 @@ use BookStack\Entities\Repos\ChapterRepo;
 use BookStack\Exceptions\PermissionsException;
 use BookStack\Http\ApiController;
 use Exception;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 
 class ChapterApiController extends ApiController
 {
-    protected $rules = [
+    protected array $rules = [
         'create' => [
             'book_id'             => ['required', 'integer'],
             'name'                => ['required', 'string', 'max:255'],
@@ -144,7 +144,10 @@ class ChapterApiController extends ApiController
         $chapter->load(['tags']);
         $chapter->makeVisible('description_html');
         $chapter->setAttribute('description_html', $chapter->descriptionHtml());
-        $chapter->setAttribute('book_slug', $chapter->book()->first()->slug);
+
+        /** @var Book $book */
+        $book = $chapter->book()->first();
+        $chapter->setAttribute('book_slug', $book->slug);
 
         return $chapter;
     }

@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'Bydd hwn yn dileu\'r mewnforyn ffeil ZIP sy wedi\'i lwytho i fyny, a fydd e ddim gallu cael ei ddadwneud.',
     'import_errors' => 'Gwallau Mewnforyn',
     'import_errors_desc' => 'Digwyddodd y gwallau canlynol yn ystod cynnig y mewnforyn:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Caniatâd',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Mewnosod Llun',
     'pages_md_show_preview' => 'Dangos rhagolwg',
     'pages_md_sync_scroll' => 'Cydamseru sgrôl ragolwg',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Canfuwyd Llun heb ei Gadw',
     'pages_drawing_unsaved_confirm' => 'Canfuwyd data llun heb ei gadw o ymgais aflwyddiannus blaenorol i gadw llun. Hoffech chi adfer a pharhau i olygu\'r llun heb ei gadw?',
     'pages_not_in_chapter' => 'Nid yw\'r dudalen mewn pennod',

@@ -29,10 +29,10 @@ return [
 
     // Toolbar
     'formats' => 'Форматы',
-    'header_large' => 'Большой',
-    'header_medium' => 'Средний',
-    'header_small' => 'Маленький',
-    'header_tiny' => 'Крошечный',
+    'header_large' => 'Крупный заголовок',
+    'header_medium' => 'Средний заголовок',
+    'header_small' => 'Небольшой заголовок',
+    'header_tiny' => 'Маленький заголовок',
     'paragraph' => 'Обычный текст',
     'blockquote' => 'Цитата',
     'inline_code' => 'Встроенный код',
@@ -48,6 +48,7 @@ return [
     'superscript' => 'Надстрочный',
     'subscript' => 'Подстрочный',
     'text_color' => 'Цвет текста',
+    'highlight_color' => 'Highlight color',
     'custom_color' => 'Пользовательский цвет',
     'remove_color' => 'Удалить цвет',
     'background_color' => 'Цвет фона',

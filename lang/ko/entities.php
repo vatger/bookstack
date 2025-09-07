@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => '업로드된 ZIP 파일이 삭제되며, 실행 취소할 수 없습니다.',
     'import_errors' => '가져오기 오류',
     'import_errors_desc' => '가져오기 중 에러가 발생했습니다.',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => '권한',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => '드로잉 추가',
     'pages_md_show_preview' => '미리보기 표시',
     'pages_md_sync_scroll' => '미리보기 스크롤 동기화',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => '저장되지 않은 드로잉 발견',
     'pages_drawing_unsaved_confirm' => '이전에 실패한 드로잉 저장 시도에서 저장되지 않은 드로잉 데이터가 발견되었습니다. 이 저장되지 않은 드로잉을 복원하고 계속 편집하시겠습니까?',
     'pages_not_in_chapter' => '챕터에 있는 문서가 아닙니다.',

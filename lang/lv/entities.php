@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'Šis izdzēsīs augšupielādēto importa ZIP failu, un šo darbību nevarēs atcelt.',
     'import_errors' => 'Importa kļūdas',
     'import_errors_desc' => 'Importa mēģinājumā atgadījās šīs kļūdas:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Atļaujas',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Ievietot zīmējumu',
     'pages_md_show_preview' => 'Rādīt priekšskatu',
     'pages_md_sync_scroll' => 'Sync preview scroll',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Atrasts nesaglabāts attēls',
     'pages_drawing_unsaved_confirm' => 'Unsaved drawing data was found from a previous failed drawing save attempt. Would you like to restore and continue editing this unsaved drawing?',
     'pages_not_in_chapter' => 'Lapa nav nodaļā',

@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'سيؤدي هذا إلى حذف مِلَفّ الاستيراد المضغوط ZIP، ولا يمكن التراجع عنه.',
     'import_errors' => 'أخطاء الاستيراد',
     'import_errors_desc' => 'حدثت الأخطاء التالية خلال محاولة الاستيراد:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'الأذونات',
@@ -248,7 +252,7 @@ return [
     'pages_edit_switch_to_markdown_stable' => '(محتوى مستقر)',
     'pages_edit_switch_to_wysiwyg' => 'التبديل إلى محرر ما تراه هو ما تحصل عليه -WYSIWYG-',
     'pages_edit_switch_to_new_wysiwyg' => 'التبديل إلى محرر ما تراه هو ما تحصل عليه الجديد -new WYSIWYG-',
-    'pages_edit_switch_to_new_wysiwyg_desc' => '(In Beta Testing)',
+    'pages_edit_switch_to_new_wysiwyg_desc' => '(في الاختبار التجريبي)',
     'pages_edit_set_changelog' => 'تثبيت سجل التعديل',
     'pages_edit_enter_changelog_desc' => 'ضع وصف مختصر للتعديلات التي تمت',
     'pages_edit_enter_changelog' => 'أدخل سجل التعديل',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'إدخال رسمة',
     'pages_md_show_preview' => 'عرض المعاينة',
     'pages_md_sync_scroll' => 'مزامنة معاينة التمرير',
+    'pages_md_plain_editor' => 'محرر النصوص العادي',
     'pages_drawing_unsaved' => 'تم العثور على رسم غير محفوظ',
     'pages_drawing_unsaved_confirm' => 'تم العثور على بيانات رسم غير محفوظة من محاولة حفظ رسم سابقة فاشلة. هل ترغب في استعادة هذا الرسم غير المحفوظ ومواصلة تحريره؟',
     'pages_not_in_chapter' => 'صفحة ليست في فصل',

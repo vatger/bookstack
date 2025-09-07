@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'Þetta mun eyða innsendri ZIP skrá, þessa aðgerð er ekki hægt að afturkalla.',
     'import_errors' => 'Villur í innflutningi',
     'import_errors_desc' => 'Eftirfarandi villur komu upp við innflutning:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Réttindi',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Setja inn teikningu',
     'pages_md_show_preview' => 'Sýna forskoðun',
     'pages_md_sync_scroll' => 'Sync preview scroll',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Unsaved Drawing Found',
     'pages_drawing_unsaved_confirm' => 'Unsaved drawing data was found from a previous failed drawing save attempt. Would you like to restore and continue editing this unsaved drawing?',
     'pages_not_in_chapter' => 'Síðan tilheyrir engum kafla',

@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'This will delete the uploaded import ZIP file, and cannot be undone.',
     'import_errors' => 'Import Errors',
     'import_errors_desc' => 'The follow errors occurred during the import attempt:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Разрешения',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Вставить рисунок',
     'pages_md_show_preview' => 'Предпросмотр',
     'pages_md_sync_scroll' => 'Синхронизировать прокрутку',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Найден несохраненный чертеж',
     'pages_drawing_unsaved_confirm' => 'Несохраненные данные были найдены из предыдущей неудачной попытки сохранения рисунка. Вы хотите восстановить и продолжить редактирование несохраненного рисунка?',
     'pages_not_in_chapter' => 'Страница не находится в главе',

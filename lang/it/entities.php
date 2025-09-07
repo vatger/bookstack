@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'Questa operazione cancella il file ZIP di importazione caricato e non può essere annullata.',
     'import_errors' => 'Errori di importazione',
     'import_errors_desc' => 'Gli seguenti errori si sono verificati durante il tentativo di importazione:',
+    'breadcrumb_siblings_for_page' => 'Naviga tra le pagine correlate',
+    'breadcrumb_siblings_for_chapter' => 'Naviga tra i capitoli correlati',
+    'breadcrumb_siblings_for_book' => 'Naviga tra i libri correlati',
+    'breadcrumb_siblings_for_bookshelf' => 'Naviga tra le librerie correlate',
 
     // Permissions and restrictions
     'permissions' => 'Permessi',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Inserisci disegno',
     'pages_md_show_preview' => 'Visualizza anteprima',
     'pages_md_sync_scroll' => 'Sincronizza scorrimento anteprima',
+    'pages_md_plain_editor' => 'Editor di testo semplice',
     'pages_drawing_unsaved' => 'Trovato disegno non salvato',
     'pages_drawing_unsaved_confirm' => 'Sono stati trovati i dati di un disegno non salvato da un precedente tentativo di salvataggio di disegno non riuscito. Ripristinare e continuare a modificare questo disegno non salvato?',
     'pages_not_in_chapter' => 'La pagina non è in un capitolo',
@@ -394,7 +399,7 @@ return [
     'comment_add' => 'Aggiungi commento',
     'comment_none' => 'Nessun commento da visualizzare',
     'comment_placeholder' => 'Scrivi un commento',
-    'comment_thread_count' => ':count Comment Thread|:count Comment Threads',
+    'comment_thread_count' => ':count Commento Thread| :count Commenti Threads',
     'comment_archived_count' => ':count Archiviato',
     'comment_archived_threads' => 'Discussioni Archiviate',
     'comment_save' => 'Salva commento',

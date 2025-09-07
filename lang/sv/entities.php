@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'Detta kommer att ta bort den uppladdade ZIP-baserade importfilen och kan inte ångras.',
     'import_errors' => 'Importfel',
     'import_errors_desc' => 'Följande fel inträffade under importförsöket:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Rättigheter',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Infoga teckning',
     'pages_md_show_preview' => 'Visa förhandsgranskning',
     'pages_md_sync_scroll' => 'Sync preview scroll',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Osparad ritning hittades',
     'pages_drawing_unsaved_confirm' => 'Osparade ritningsdata hittades från ett tidigare misslyckat sparförsök. Vill du återställa och fortsätta redigera den osparade ritningen?',
     'pages_not_in_chapter' => 'Sidan ligger inte i något kapitel',

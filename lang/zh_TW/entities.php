@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => '這將會刪除已上傳的匯入 ZIP 檔案，且無法還原。',
     'import_errors' => '匯入錯誤',
     'import_errors_desc' => '嘗試匯入時發生以下錯誤：',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => '權限',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => '插入繪圖',
     'pages_md_show_preview' => '顯示預覽',
     'pages_md_sync_scroll' => '預覽頁面同步捲動',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => '偵測到未儲存的繪圖',
     'pages_drawing_unsaved_confirm' => '從之前保存失敗的繪圖中發現了可恢復的數據。您想恢復並繼續編輯這個未保存的繪圖嗎？',
     'pages_not_in_chapter' => '頁面不在章節中',

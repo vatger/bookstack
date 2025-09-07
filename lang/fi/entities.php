@@ -63,6 +63,10 @@ return [
     'import_delete_desc' => 'This will delete the uploaded import ZIP file, and cannot be undone.',
     'import_errors' => 'Import Errors',
     'import_errors_desc' => 'The follow errors occurred during the import attempt:',
+    'breadcrumb_siblings_for_page' => 'Navigate siblings for page',
+    'breadcrumb_siblings_for_chapter' => 'Navigate siblings for chapter',
+    'breadcrumb_siblings_for_book' => 'Navigate siblings for book',
+    'breadcrumb_siblings_for_bookshelf' => 'Navigate siblings for shelf',
 
     // Permissions and restrictions
     'permissions' => 'Käyttöoikeudet',
@@ -268,6 +272,7 @@ return [
     'pages_md_insert_drawing' => 'Lisää piirustus',
     'pages_md_show_preview' => 'Näytä esikatselu',
     'pages_md_sync_scroll' => 'Vieritä esikatselua koodin vierityksen mukaan',
+    'pages_md_plain_editor' => 'Plaintext editor',
     'pages_drawing_unsaved' => 'Tallentamaton piirustus löytyi',
     'pages_drawing_unsaved_confirm' => 'Järjestelmä löysi tallentamattoman piirustuksen. Haluatko palauttaa piirustuksen ja jatkaa sen muokkaamista?',
     'pages_not_in_chapter' => 'Sivu ei kuulu mihinkään lukuun',
