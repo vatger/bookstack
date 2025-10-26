@@ -1,12 +1,14 @@
 @use "mixins";
+@use "vatger/vatger" as vatger;
 
 /**
  * Background colors
  */
 
 .primary-background {
-  background-color: var(--color-primary) !important;
+  background-color: vatger.$color-secondary-50;
 }
+
 .primary-background-light {
   background-color: var(--color-primary-light);
   @include mixins.whenDark {

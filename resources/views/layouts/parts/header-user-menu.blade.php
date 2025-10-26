@@ -3,7 +3,7 @@
           aria-haspopup="menu"
           aria-expanded="false"
           aria-label="{{ trans('common.profile_menu') }}">
-        <img class="avatar" src="{{$user->getAvatar(30)}}" alt="{{ $user->name }}">
+        <i data-lucide="circle-user-round"></i>
         <span class="name">{{ $user->getShortName(9) }}</span> @icon('caret-down')
     </button>
     <ul refs="dropdown@menu" class="dropdown-menu" role="menu" aria-label="{{ trans('common.profile_menu') }}">

@@ -4,6 +4,7 @@ import {Translator} from './services/translations';
 import * as componentMap from './components/index';
 import {ComponentStore} from './services/components';
 import {baseUrl, importVersioned} from "./services/util";
+import "./lucide";
 
 // eslint-disable-next-line no-underscore-dangle
 window.__DEV__ = false;
