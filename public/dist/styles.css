@@ -87,6 +87,121 @@
   font-weight: 800;
   font-style: italic;
 }
+/**
+ * Background colors
+ */
+.primary-background {
+  background-color: oklch(95.8% 0.003 264.69deg);
+}
+
+.primary-background-light {
+  background-color: var(--color-primary-light);
+}
+html.dark-mode .primary-background-light {
+  background: #000;
+}
+html.dark-mode .primary-background-light .text-link {
+  color: #AAA !important;
+}
+
+.link-background {
+  background-color: var(--color-link) !important;
+}
+
+/*
+ * Status text colors
+ */
+.text-pos, .text-pos:hover, .text-pos-hover:hover {
+  color: var(--color-positive) !important;
+  fill: var(--color-positive) !important;
+}
+
+.text-warn, .text-warn:hover, .text-warn-hover:hover {
+  color: var(--color-warning) !important;
+  fill: var(--color-warning) !important;
+}
+
+.text-neg, .text-neg:hover, .text-neg-hover:hover {
+  color: var(--color-negative) !important;
+  fill: var(--color-negative) !important;
+}
+
+/*
+ * Style text colors
+ */
+.text-primary, .text-primary:hover, .text-primary-hover:hover {
+  color: var(--color-primary) !important;
+  fill: var(--color-primary) !important;
+}
+
+.text-muted {
+  color: oklch(36.1% 0.046 251.47deg) !important;
+  fill: currentColor !important;
+}
+html.dark-mode .text-muted {
+  color: red !important;
+}
+
+.text-dark {
+  color: red !important;
+  fill: currentColor !important;
+}
+html.dark-mode .text-dark {
+  color: red !important;
+}
+
+.text-white {
+  color: #fff;
+  fill: currentColor !important;
+}
+
+/*
+ * Entity text colors
+ */
+.text-bookshelf, .text-bookshelf:hover {
+  color: var(--color-bookshelf);
+  fill: var(--color-bookshelf);
+}
+
+.text-book, .text-book:hover {
+  color: var(--color-book);
+  fill: var(--color-book);
+}
+
+.text-page, .text-page:hover {
+  color: var(--color-page);
+  fill: var(--color-page);
+}
+
+.text-page.draft, .text-page.draft:hover {
+  color: var(--color-page-draft);
+  fill: var(--color-page-draft);
+}
+
+.text-chapter, .text-chapter:hover {
+  color: var(--color-chapter);
+  fill: var(--color-chapter);
+}
+
+/*
+ * Standard & Entity background colors
+ */
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-book {
+  background-color: var(--color-book);
+}
+
+.bg-chapter {
+  background-color: var(--color-chapter);
+}
+
+.bg-bookshelf {
+  background-color: var(--color-bookshelf);
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -137,11 +252,11 @@ table {
 }
 
 :root {
-  --font-body: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-body: Vatger, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-code: Lucida Console, DejaVu Sans Mono, Ubuntu Mono, Monaco, monospace;
   --color-primary: #206ea7;
   --color-primary-light: rgba(32,110,167,0.15);
-  --color-link: #206ea7;
+  --color-link: colors.$color-accent-500;
   --color-page: #206ea7;
   --color-page-draft: #7e50b1;
   --color-chapter: #af4d0d;
@@ -873,16 +988,16 @@ html.dark-mode {
 }
 
 body {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
-  color: #444;
+  color: oklch(36.1% 0.046 251.47deg);
   -webkit-font-smoothing: antialiased;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 html.dark-mode body {
-  color: #AAA;
+  color: red;
 }
 
 /**
@@ -1386,130 +1501,9 @@ span.sep {
   height: 1em;
   display: inline-block;
   position: relative;
-  bottom: -0.105em;
   margin-inline-end: 6px;
   pointer-events: none;
   fill: currentColor;
-}
-
-/**
- * Background colors
- */
-.primary-background {
-  background-color: oklch(95.8% 0.003 264.69deg);
-}
-
-.primary-background-light {
-  background-color: var(--color-primary-light);
-}
-html.dark-mode .primary-background-light {
-  background: #000;
-}
-html.dark-mode .primary-background-light .text-link {
-  color: #AAA !important;
-}
-
-.link-background {
-  background-color: var(--color-link) !important;
-}
-
-/*
- * Status text colors
- */
-.text-pos, .text-pos:hover, .text-pos-hover:hover {
-  color: var(--color-positive) !important;
-  fill: var(--color-positive) !important;
-}
-
-.text-warn, .text-warn:hover, .text-warn-hover:hover {
-  color: var(--color-warning) !important;
-  fill: var(--color-warning) !important;
-}
-
-.text-neg, .text-neg:hover, .text-neg-hover:hover {
-  color: var(--color-negative) !important;
-  fill: var(--color-negative) !important;
-}
-
-/*
- * Style text colors
- */
-.text-primary, .text-primary:hover, .text-primary-hover:hover {
-  color: var(--color-primary) !important;
-  fill: var(--color-primary) !important;
-}
-
-.text-link, .text-link:hover, .text-link-hover:hover {
-  color: var(--color-link) !important;
-  fill: var(--color-link) !important;
-}
-
-.text-muted {
-  color: #575757 !important;
-  fill: currentColor !important;
-}
-html.dark-mode .text-muted {
-  color: #888888 !important;
-}
-
-.text-dark {
-  color: #222 !important;
-  fill: currentColor !important;
-}
-html.dark-mode .text-dark {
-  color: #ccc !important;
-}
-
-.text-white {
-  color: #fff;
-  fill: currentColor !important;
-}
-
-/*
- * Entity text colors
- */
-.text-bookshelf, .text-bookshelf:hover {
-  color: var(--color-bookshelf);
-  fill: var(--color-bookshelf);
-}
-
-.text-book, .text-book:hover {
-  color: var(--color-book);
-  fill: var(--color-book);
-}
-
-.text-page, .text-page:hover {
-  color: var(--color-page);
-  fill: var(--color-page);
-}
-
-.text-page.draft, .text-page.draft:hover {
-  color: var(--color-page-draft);
-  fill: var(--color-page-draft);
-}
-
-.text-chapter, .text-chapter:hover {
-  color: var(--color-chapter);
-  fill: var(--color-chapter);
-}
-
-/*
- * Standard & Entity background colors
- */
-.bg-white {
-  background-color: #FFFFFF;
-}
-
-.bg-book {
-  background-color: var(--color-book);
-}
-
-.bg-chapter {
-  background-color: var(--color-chapter);
-}
-
-.bg-bookshelf {
-  background-color: var(--color-bookshelf);
 }
 
 /**
@@ -2134,7 +2128,7 @@ html.dark-mode .scroll-away-from-bottom:after {
 .card {
   background-color: #FFF;
   box-shadow: 0 1px 6px -1px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 0.5rem;
   break-inside: avoid;
 }
 html.dark-mode .card {
@@ -2151,10 +2145,11 @@ html.dark-mode .card {
 .card-title {
   padding: 16px 16px 6px;
   margin: 0;
-  font-size: 14px;
-  color: #222;
+  font-size: 1.125rem;
+  line-height: 1.5555555556;
+  color: oklch(36.1% 0.046 251.47deg);
   fill: #222;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .card-title a {
@@ -2478,6 +2473,10 @@ button {
   font-size: 100%;
 }
 
+button.icon-list-item {
+  border-radius: 0.5rem;
+}
+
 .button {
   text-decoration: none;
   font-size: 0.85rem;
@@ -2488,7 +2487,6 @@ button {
   display: inline-block;
   font-weight: 400;
   outline: 0;
-  border-radius: 4px;
   cursor: pointer;
   transition: background-color ease-in-out 120ms, filter ease-in-out 120ms, box-shadow ease-in-out 120ms;
   box-shadow: none;
@@ -2727,7 +2725,7 @@ input[type=color], input[type=password], select, textarea, .fake-input {
   border-color: #d4d4d4;
   color: #666;
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 10.8px;
   height: 40px;
   width: 250px;
@@ -2924,7 +2922,7 @@ html.dark-mode .editor-toolbar button {
 }
 
 .editor-toolbar .buttons {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .editor-toolbar .buttons .dropdown-menu {
   padding: 0;
@@ -3186,7 +3184,7 @@ html.dark-mode .form-group.collapsible {
   display: block;
   width: 100%;
   padding: 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #666;
   height: auto;
 }
@@ -5386,7 +5384,7 @@ html.dark-mode .comment-box {
   padding: 6px 12px;
 }
 .comment-box .content p, .comment-box .content ul, .comment-box .content ol {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin: 0.5em 0;
 }
 .comment-box .actions {
@@ -6000,6 +5998,7 @@ header {
   border-bottom: 1px solid #DDD;
   box-shadow: 0 1px 6px -1px rgba(0, 0, 0, 0.1);
   border-bottom-color: #DDD;
+  font-weight: 600;
 }
 html.dark-mode header {
   border-bottom-color: #000;
@@ -6014,14 +6013,27 @@ header .links {
   vertical-align: top;
 }
 header .links a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 10px 16px;
-  color: #FFF;
-  border-radius: 3px;
+  color: oklch(36.1% 0.046 251.47deg);
+}
+html.dark-mode header .links a {
+  color: red;
+}
+@media screen and (min-width: 1001px) {
+  header .links a {
+    border-radius: 0.5rem;
+  }
 }
 header .links a:hover {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: oklch(92.2% 0.007 268.62deg);
+}
+header .links a svg {
+  width: 20px;
+  height: 20px;
 }
 header .dropdown-container {
   padding-inline-start: 16px;
@@ -6034,6 +6046,9 @@ header .avatar {
   width: 30px;
   height: 30px;
 }
+header .dropdown-container {
+  padding: 6px;
+}
 header .user-name {
   vertical-align: top;
   position: relative;
@@ -6041,28 +6056,33 @@ header .user-name {
   align-items: center;
   cursor: pointer;
   padding: 12px;
-  margin: 0 -12px;
-  border-radius: 3px;
+  margin: 0;
   gap: 6px;
-  color: #FFF;
+  color: oklch(36.1% 0.046 251.47deg);
+}
+html.dark-mode header .user-name {
+  color: red;
+}
+@media screen and (min-width: 1001px) {
+  header .user-name {
+    border-radius: 0.5rem;
+  }
 }
 header .user-name > span {
-  padding-inline-start: 6px;
   display: inline-block;
-  line-height: 1;
+  line-height: 1.6;
+  font-weight: 600;
 }
 header .user-name > svg {
+  width: 20px;
+  height: 20px;
   font-size: 18px;
-  margin-top: -2px;
   margin-inline-end: 0;
 }
 header .user-name:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: oklch(92.2% 0.007 268.62deg);
 }
 @media screen and (min-width: 1001px) and (max-width: 1100px) {
-  header .user-name {
-    padding-inline-start: 6px;
-  }
   header .user-name .name {
     display: none;
   }
@@ -6076,22 +6096,32 @@ header .search-box {
   display: inline-block;
 }
 header .search-box input {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: oklch(92.2% 0.007 268.62deg);
+  color: oklch(36.1% 0.046 251.47deg);
+  position: relative;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
-  color: #EEE;
-  z-index: 2;
+  z-index: 50;
   height: auto;
   padding: 9px;
   padding-inline-start: 40px;
+}
+html.dark-mode header .search-box input {
+  background-color: red;
+}
+html.dark-mode header .search-box input {
+  color: red;
 }
 header .search-box input:focus {
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 header .search-box input::placeholder {
-  color: #FFF;
+  color: oklch(36.1% 0.046 251.47deg);
   opacity: 0.6;
+}
+html.dark-mode header .search-box input::placeholder {
+  color: red;
 }
 @media screen and (min-width: 1001px) and (max-width: 1100px) {
   header .search-box {
@@ -6103,17 +6133,18 @@ header .search-box:focus-within #header-search-box-button {
 }
 
 #header-search-box-button {
-  z-index: 1;
+  position: absolute;
+  z-index: 60;
   inset-inline-start: 16px;
-  top: 10px;
-  color: #FFF;
   opacity: 0.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: oklch(36.1% 0.046 251.47deg);
 }
 html.dark-mode #header-search-box-button {
-  color: #AAA;
+  color: red;
 }
 #header-search-box-button svg {
+  width: 16px;
+  height: 16px;
   margin-inline-end: 0;
 }
 
@@ -6123,15 +6154,18 @@ html.dark-mode #header-search-box-button {
   top: -12px;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 10;
   margin-left: -48px;
   margin-right: -48px;
   padding-top: 56px;
   border-radius: 3px;
   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.13);
   transform-origin: top center;
-  opacity: 0.5;
   transform: scale(0.9);
+  background-color: oklch(95.8% 0.003 264.69deg);
+}
+html.dark-mode .global-search-suggestions {
+  background-color: red;
 }
 .global-search-suggestions .entity-item-snippet p {
   display: none;
@@ -6155,20 +6189,20 @@ header .search-box.search-active:focus-within .global-search-suggestions {
   display: block;
 }
 header .search-box.search-active:focus-within input {
-  background-color: #EEE;
-  border-color: #DDD;
+  background-color: oklch(92.2% 0.007 268.62deg);
+  border-color: oklch(84.5% 0.015 268.51deg);
 }
 html.dark-mode header .search-box.search-active:focus-within input {
-  background-color: #333;
+  background-color: red;
 }
 html.dark-mode header .search-box.search-active:focus-within input {
-  border-color: #111;
+  border-color: red;
 }
 header .search-box.search-active:focus-within #header-search-box-button, header .search-box.search-active:focus-within input {
-  color: #444;
+  color: oklch(36.1% 0.046 251.47deg);
 }
 html.dark-mode header .search-box.search-active:focus-within #header-search-box-button, html.dark-mode header .search-box.search-active:focus-within input {
-  color: #AAA;
+  color: red;
 }
 
 .logo {
@@ -6902,7 +6936,7 @@ html.dark-mode ul.pagination li.active span {
 .entity-list-item:not(.no-hover):hover, .icon-list-item:not(.no-hover):hover {
   background-color: rgba(0, 0, 0, 0.06);
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 0.5rem;
 }
 html.dark-mode .entity-list-item:not(.no-hover):hover, html.dark-mode .icon-list-item:not(.no-hover):hover {
   background-color: rgba(255, 255, 255, 0.06);
@@ -7004,11 +7038,11 @@ html.dark-mode .icon-list-item-dropdown-toggle:hover {
 }
 
 .card .entity-list-item:not(.no-hover, .book-contents .entity-list-item):hover {
-  background-color: #F2F2F2;
+  background-color: oklch(92.2% 0.007 268.62deg);
   border-radius: 0;
 }
 html.dark-mode .card .entity-list-item:not(.no-hover, .book-contents .entity-list-item):hover {
-  background-color: #2d2d2d;
+  background-color: red;
 }
 
 .card .entity-list-item .entity-list-item:hover {
@@ -7069,7 +7103,7 @@ html.dark-mode .entity-list-item-image .svg-icon {
 }
 
 .entity-list.compact {
-  font-size: 8.4px;
+  font-size: 0.525rem;
 }
 .entity-list.compact h4, .entity-list.compact a {
   line-height: 1.2;
@@ -7078,7 +7112,7 @@ html.dark-mode .entity-list-item-image .svg-icon {
   display: none;
 }
 .entity-list.compact .entity-list-item p {
-  font-size: 11.2px;
+  font-size: 0.7rem;
   padding-top: 6px;
 }
 .entity-list.compact .entity-list-item p:empty {
@@ -7089,7 +7123,7 @@ html.dark-mode .entity-list-item-image .svg-icon {
 }
 .entity-list.compact > p.empty-text {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .entity-list.compact hr {
   margin: 0;
@@ -7572,7 +7606,7 @@ html.dark-mode .pointer .button {
 }
 
 .content-comment-window {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.4;
   position: absolute;
   top: calc(100% + 3px);

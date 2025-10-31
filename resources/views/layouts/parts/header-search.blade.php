@@ -3,7 +3,7 @@
             refs="global-search@button"
             type="submit"
             aria-label="{{ trans('common.search') }}"
-            tabindex="-1">@icon('search')</button>
+            tabindex="-1"><i data-lucide="search"></i></button>
     <input id="header-search-box-input"
            refs="global-search@input"
            type="text"
