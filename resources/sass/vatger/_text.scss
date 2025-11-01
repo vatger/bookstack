@@ -1,6 +1,7 @@
 @use "mixins";
 @use "vars";
 
+
 /**
  * Fonts
  */
@@ -50,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: block;
   font-family: var(--font-heading, var(--font-body));
-  @include mixins.lightDark(color, #222, #BBB);
+  @include mixins.lightDark(color, vars.$text-primary, red);
 }
 
 h5 {
