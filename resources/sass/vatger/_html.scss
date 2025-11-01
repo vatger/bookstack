@@ -15,7 +15,7 @@
 html {
   height: 100%;
   overflow-y: scroll;
-  background-color: #F2F2F2;
+  background-color: colors.$color-secondary-50;
   &.flexbox {
     overflow-y: hidden;
   }

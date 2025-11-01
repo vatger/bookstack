@@ -13,40 +13,51 @@
   margin: 0 auto;
   overflow-wrap: break-word;
   position: relative;
+
   .align-left {
     text-align: left;
   }
+
   img.align-left, table.align-left, iframe.align-left, video.align-left {
     float: left !important;
     margin: vars.$xs vars.$m vars.$m 0;
   }
+
   .align-right {
     text-align: right !important;
   }
+
   img.align-right, table.align-right, iframe.align-right, video.align-right {
     float: right !important;
     margin: vars.$xs 0 vars.$xs vars.$s;
   }
+
   .align-center {
     text-align: center;
   }
+
   img.align-center, video.align-center, iframe.align-center {
     display: block;
   }
+
   img.align-center, table.align-center, iframe.align-center, video.align-center {
     margin-left: auto;
     margin-right: auto;
   }
+
   .align-justify {
     text-align: justify;
   }
+
   h1, h2, h3, h4, h5, h6, pre {
     clear: left;
   }
+
   hr {
     clear: both;
     margin: vars.$m 0;
   }
+
   table {
     hyphens: auto;
     table-layout: fixed;
@@ -59,9 +70,11 @@
   del {
     text-decoration: none;
   }
+
   ins {
     background: #dbffdb;
   }
+
   del {
     background: #FFECEC;
   }
@@ -72,6 +85,7 @@
     margin-bottom: 1em;
     padding: vars.$s;
   }
+
   details > summary {
     margin-top: -(vars.$s);
     margin-left: -(vars.$s);
@@ -81,14 +95,17 @@
     @include mixins.lightDark(background-color, #EEE, #333);
     padding: vars.$xs vars.$s;
   }
+
   details[open] > summary {
     margin-bottom: vars.$s;
     border-bottom: 1px solid;
     @include mixins.lightDark(border-color, #DDD, #555);
   }
+
   details > summary + * {
     margin-top: .2em;
   }
+
   details:after {
     content: '';
     display: block;
@@ -130,7 +147,7 @@
 body .page-content img,
 .page-content img:not([data-mce-object]) {
   max-width: 100%;
-  height:auto;
+  height: auto;
 }
 
 /**
@@ -150,6 +167,7 @@ body .page-content img,
   display: block;
   position: relative;
   overflow: auto;
+
   &:before {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiMwMTUzODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4gICAgPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTEgMTVoLTJ2LTZoMnY2em0wLThoLTJWN2gydjJ6Ii8+PC9zdmc+');
     background-repeat: no-repeat;
@@ -166,35 +184,43 @@ body .page-content img,
     line-height: 1;
     opacity: 0.8;
   }
+
   &.success {
     @include mixins.lightDark(border-color, vars.$positive, vars.$positive-dark);
     @include mixins.lightDark(background-color, #eafdeb, #122913);
     @include mixins.lightDark(color, #063409, vars.$positive-dark);
   }
+
   &.success:before {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiMzNzZjMzkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4gICAgPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bS0yIDE1bC01LTUgMS40MS0xLjQxTDEwIDE0LjE3bDcuNTktNy41OUwxOSA4bC05IDl6Ii8+PC9zdmc+");
   }
+
   &.danger {
     @include mixins.lightDark(border-color, vars.$negative, vars.$negative-dark);
     @include mixins.lightDark(background-color, #fcdbdb, #250505);
     @include mixins.lightDark(color, #4d0706, vars.$negative-dark);
   }
+
   &.danger:before {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiNiOTE4MTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik0xNS43MyAzSDguMjdMMyA4LjI3djcuNDZMOC4yNyAyMWg3LjQ2TDIxIDE1LjczVjguMjdMMTUuNzMgM3pNMTIgMTcuM2MtLjcyIDAtMS4zLS41OC0xLjMtMS4zIDAtLjcyLjU4LTEuMyAxLjMtMS4zLjcyIDAgMS4zLjU4IDEuMyAxLjMgMCAuNzItLjU4IDEuMy0xLjMgMS4zem0xLTQuM2gtMlY3aDJ2NnoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==");
   }
+
   &.info {
     @include mixins.lightDark(border-color, vars.$info, vars.$info-dark);
     @include mixins.lightDark(background-color, #d3efff, #001825);
     @include mixins.lightDark(color, #01466c, vars.$info-dark);
   }
+
   &.warning {
     @include mixins.lightDark(border-color, vars.$warning, vars.$warning-dark);
-    @include mixins.lightDark(background-color, colors.$color-warning-200 , colors.$color-warning-900);
+    @include mixins.lightDark(background-color, colors.$color-warning-200, colors.$color-warning-900);
     @include mixins.lightDark(color, #6a2802, vars.$warning-dark);
   }
+
   &.warning:before {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiNiNjUzMWMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4gICAgPHBhdGggZD0iTTEgMjFoMjJMMTIgMiAxIDIxem0xMi0zaC0ydi0yaDJ2MnptMC00aC0ydi00aDJ2NHoiLz48L3N2Zz4=");
   }
+
   a {
     color: inherit;
     text-decoration: underline;

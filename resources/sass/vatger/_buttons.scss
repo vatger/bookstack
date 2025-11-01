@@ -7,6 +7,12 @@ button {
   font-size: 100%;
 }
 
+.actions button.icon-list-item {
+  color: var(--color-link);
+}
+
+
+
 button.icon-list-item {
   border-radius: vars.$header-link-border-radius;
 }

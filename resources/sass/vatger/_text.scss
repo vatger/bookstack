@@ -1,5 +1,6 @@
 @use "mixins";
 @use "vars";
+@use "tailwind";
 
 
 /**
@@ -19,35 +20,31 @@ pre, #markdown-editor-input, .text-mono, .code-base {
  */
 
 h1 {
-  font-size: 3.425em;
-  line-height: 1.22222222em;
+  @include tailwind.text-6xl();
   margin-top: 0.48888889em;
   margin-bottom: 0.48888889em;
 }
 
 h2 {
-  font-size: 2.8275em;
-  line-height: 1.294117647em;
+  @include tailwind.text-5xl();
   margin-top: 0.8627451em;
   margin-bottom: 0.43137255em;
 }
 
 h3 {
-  font-size: 2.333em;
-  line-height: 1.221428572em;
+  @include tailwind.text-4xl();
   margin-top: 0.78571429em;
   margin-bottom: 0.43137255em;
 }
 
 h4 {
-  font-size: 1.666em;
-  line-height: 1.375em;
+  @include tailwind.text-xl();
   margin-top: 0.78571429em;
   margin-bottom: 0.43137255em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 500;
   position: relative;
   display: block;
   font-family: var(--font-heading, var(--font-body));
@@ -55,7 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h5 {
-  font-size: 1.4em;
+  @include tailwind.text-lg();
+}
+
+nav > h5 {
+  @include tailwind.text-xl();
 }
 
 h5, h6 {
@@ -83,7 +84,7 @@ h5, h6 {
 }
 
 .list-heading {
-  font-size: 2rem;
+  @include tailwind.text-5xl();
 }
 
 h2.list-heading {

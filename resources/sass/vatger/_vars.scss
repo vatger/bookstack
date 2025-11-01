@@ -79,7 +79,7 @@ $fs-s: 0.75rem; // text-xs
 $positive: #65af7d;
 $negative: #c94944;
 $info: #0288D1;
-$warning: colors.$color-warning-700;
+$warning: colors.$color-warning-800;
 $positive-dark: #4aa850;
 $negative-dark: #e85c5b;
 $info-dark: #0288D1;
@@ -93,7 +93,7 @@ $bs-light: 0 0 4px 1px #CCC;
 $bs-dark: 0 0 4px 1px rgba(0, 0, 0, 0.5);
 $bs-med: 0 1px 3px 1px rgba(76, 76, 76, 0.26);
 $bs-large: 0 1px 6px 1px rgba(22, 22, 22, 0.2);
-$bs-card: 0 1px 6px -1px rgba(0, 0, 0, 0.1);
+$bs-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); // tailwind.shadow-md
 $bs-card-dark: 0 1px 6px -1px rgba(0, 0, 0, 0.5);
 $bs-hover: 0 2px 2px 1px rgba(0,0,0,.13);
 
