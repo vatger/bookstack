@@ -27,7 +27,7 @@ html {
 body {
   font-size: vars.$fs-m;
   line-height: 1.6;
-  @include mixins.lightDark(color, colors.$color-primary-900, red);
+  color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   height: 100%;
   display: flex;

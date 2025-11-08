@@ -8,7 +8,7 @@
  */
 
 .card {
-  @include mixins.lightDark(background-color, #FFF, #222);
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-950);
   box-shadow: vars.$bs-card;
   border-radius: vars.$header-link-border-radius;
   break-inside: avoid;
@@ -27,7 +27,7 @@
   padding: vars.$m vars.$m vars.$xs;
   margin: 0;
   @include vars.text-lg();
-  color: colors.$color-primary-900;
+  color: var(--color-primary);
   fill: #222;
   font-weight: 600;
 }
@@ -50,7 +50,7 @@
 
   &:hover {
     text-decoration: none;
-    @include mixins.lightDark(background-color, #f2f2f2, #2d2d2d);
+    @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-900);
   }
 
   &:focus {

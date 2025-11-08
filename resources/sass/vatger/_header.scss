@@ -46,7 +46,8 @@ header {
     align-items: center;
     gap: vars.$xs;
     padding: 10px vars.$m;
-    @include mixins.lightDark(color, colors.$color-primary-900, red);
+    //@include mixins.lightDark(color, var(--color-primary), var(--color-primary));
+    color: var(--color-primary);
 
     @include mixins.larger-than(vars.$bp-l) {
       border-radius: vars.$header-link-border-radius;
@@ -55,7 +56,7 @@ header {
 
   .links a:hover {
     text-decoration: none;
-    background-color: colors.$color-secondary-100;
+    @include mixins.lightDark(background-color, colors.$color-secondary-100, rgba(255, 255, 255, 0.06));
   }
 
   .links a svg {
@@ -89,8 +90,8 @@ header {
     padding: vars.$s;
     margin: 0;
     gap: vars.$xs;
-    @include mixins.lightDark(color, colors.$color-primary-900, red);
-
+    //@include mixins.lightDark(color, var(--color-primary), colors.$color-secondary-900);
+    color: var(--color-primary);
     @include mixins.larger-than(vars.$bp-l) {
       border-radius: vars.$header-link-border-radius;
     }
@@ -109,7 +110,7 @@ header {
     }
 
     &:hover {
-      background-color: colors.$color-secondary-100;
+      background-color: rgba(255, 255, 255, 0.06);
     }
 
     @include mixins.between(vars.$bp-l, vars.$bp-xl) {
@@ -129,8 +130,8 @@ header .search-box {
   display: inline-block;
 
   input {
-    @include mixins.lightDark(background-color, colors.$color-secondary-100, red);
-    @include mixins.lightDark(color, colors.$color-primary-900, red);
+    @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-950);
+    color: var(--color-primary);
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
@@ -146,7 +147,7 @@ header .search-box {
   }
 
   input::placeholder {
-    @include mixins.lightDark(color, colors.$color-primary-900, red);
+    color: var(--color-primary);
     opacity: 0.6;
   }
 
@@ -164,7 +165,7 @@ header .search-box {
   z-index: 60;
   inset-inline-start: 16px;
   opacity: 0.6;
-  @include mixins.lightDark(color, colors.$color-primary-900, red);
+  color: var(--color-primary);
 
   svg {
     @include mixins.square(16px);
@@ -187,7 +188,7 @@ header .search-box {
   transform-origin: top center;
   transform: scale(0.9);
 
-  @include mixins.lightDark(background-color, colors.$color-secondary-50, red);
+  @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-950);
 
   .entity-item-snippet p {
     display: none;
@@ -217,12 +218,12 @@ header .search-box.search-active:focus-within {
   }
 
   input {
-    @include mixins.lightDark(background-color, colors.$color-secondary-100, red);
-    @include mixins.lightDark(border-color, colors.$color-secondary-200, red);
+    @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-950);
+    @include mixins.lightDark(border-color, colors.$color-secondary-200, colors.$color-secondary-950);
   }
 
   #header-search-box-button, input {
-    @include mixins.lightDark(color, colors.$color-primary-900, red);
+    color: var(--color-primary);
   }
 }
 
