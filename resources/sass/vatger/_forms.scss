@@ -2,20 +2,21 @@
 
 @use "mixins";
 @use "vars";
-
+@use "colors";
 
 .input-base {
-  border-radius: 3px;
   border: 1px solid #D4D4D4;
-  @include mixins.lightDark(background-color, #fff, #333);
-  @include mixins.lightDark(border-color, #d4d4d4, #111);
-  @include mixins.lightDark(color, #666, #AAA);
+  @include mixins.lightDark(background-color, #fff, colors.$color-secondary-900);
+  @include mixins.lightDark(border-color, colors.$color-secondary-300, colors.$color-secondary-950);
+  color: var(--color-primary);
   display: inline-block;
   font-size: vars.$fs-m;
   padding: vars.$xs*1.8;
   height: 40px;
   width: 250px;
   max-width: 100%;
+
+  border-radius: vars.$input-border-radius;
 
   &.neg, &.invalid {
     border: 1px solid var(--color-negative);
@@ -331,7 +332,7 @@ input[type=color] {
   }
 }
 .setting-list-label {
-  @include mixins.lightDark(color, #222, #DDD);
+  @include mixins.lightDark(color, #222, colors.$color-primary-50);
   color: #222;
   font-size: 1rem;
 }

@@ -6,7 +6,10 @@
     <input type="hidden" name="type" value="{{ $entity->getMorphClass() }}">
     <input type="hidden" name="id" value="{{ $entity->id }}">
     <button type="submit" data-shortcut="favourite" class="icon-list-item text-link">
-        <span>@icon($isFavourite ? 'star' : 'star-outline')</span>
+        <span>
+            <i class="svg-icon" @if($isFavourite) style="fill: currentColor" @endif data-lucide="star"></i>
+        </span>
+
         <span>{{ $isFavourite ? trans('common.unfavourite') : trans('common.favourite') }}</span>
     </button>
 </form>

@@ -7,7 +7,9 @@
             name="level"
             value="updates"
             class="icon-list-item text-link">
-        <span>@icon('watch')</span>
+        <span>
+            <i class="svg-icon" data-lucide="eye"></i>
+        </span>
         <span>{{ trans('entities.watch') }}</span>
     </button>
 </form>

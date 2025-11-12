@@ -38,7 +38,9 @@
         <div class="icon-list text-link">
             @if(userCan('book-create-all'))
                 <a href="{{ url("/create-book") }}" data-shortcut="new" class="icon-list-item">
-                    <span>@icon('add')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="plus"></i>
+                    </span>
                     <span>{{ trans('entities.books_create') }}</span>
                 </a>
             @endif
@@ -46,13 +48,17 @@
             @include('entities.view-toggle', ['view' => $view, 'type' => 'books'])
 
             <a href="{{ url('/tags') }}" class="icon-list-item">
-                <span>@icon('tag')</span>
+                <span>
+                    <i class="svg-icon" data-lucide="tags"></i>
+                </span>
                 <span>{{ trans('entities.tags_view_tags') }}</span>
             </a>
 
             @if(userCan('content-import'))
                 <a href="{{ url('/import') }}" class="icon-list-item">
-                    <span>@icon('upload')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="upload"></i>
+                    </span>
                     <span>{{ trans('entities.import') }}</span>
                 </a>
             @endif

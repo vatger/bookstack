@@ -1,7 +1,14 @@
+@php
+    $darkMode = boolval(setting()->getForCurrentUser('dark-mode-enabled'));
+@endphp
+
 <a href="{{ url('/') }}" data-shortcut="home_view" class="logo">
-    @if(setting('app-logo', '') !== 'none')
-        <img class="logo-image" src="{{ setting('app-logo', '') === '' ? url('/logo.png') : url(setting('app-logo', '')) }}" alt="Logo">
+    @if($darkMode)
+        <img class="logo-image" src="/kb-dark.png" alt="Logo">
+    @else
+        <img class="logo-image" src="/kb-light.png" alt="Logo">
     @endif
+
     @if (setting('app-name-header'))
         <span class="logo-text">{{ setting('app-name') }}</span>
     @endif

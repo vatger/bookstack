@@ -26,7 +26,7 @@ header {
   color: rgb(250, 250, 250);
   border-bottom: 1px solid #DDD;
   box-shadow: vars.$bs-card;
-  @include mixins.lightDark(border-bottom-color, #DDD, #000);
+  @include mixins.lightDark(border-bottom-color, #DDD, colors.$color-secondary-950);
 
   font-weight: vars.$header-font-weight;
 
@@ -56,7 +56,8 @@ header {
 
   .links a:hover {
     text-decoration: none;
-    @include mixins.lightDark(background-color, colors.$color-secondary-100, rgba(255, 255, 255, 0.06));
+    @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
+    @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-800);
   }
 
   .links a svg {
@@ -110,7 +111,8 @@ header {
     }
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.06);
+      @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
+      @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-800);
     }
 
     @include mixins.between(vars.$bp-l, vars.$bp-xl) {
@@ -219,7 +221,7 @@ header .search-box.search-active:focus-within {
 
   input {
     @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-950);
-    @include mixins.lightDark(border-color, colors.$color-secondary-200, colors.$color-secondary-950);
+    @include mixins.lightDark(border-color, colors.$color-secondary-200, colors.$color-secondary-900);
   }
 
   #header-search-box-button, input {

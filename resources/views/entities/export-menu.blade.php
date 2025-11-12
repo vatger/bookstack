@@ -8,7 +8,9 @@
          aria-expanded="false"
          aria-label="{{ trans('entities.export') }}"
          data-shortcut="export">
-        <span>@icon('export')</span>
+        <span>
+            <i class="svg-icon" data-lucide="download"></i>
+        </span>
         <span>{{ trans('entities.export') }}</span>
     </button>
 

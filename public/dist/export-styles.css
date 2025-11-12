@@ -58,14 +58,11 @@ html.dark-mode {
 body {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: oklch(36.1% 0.046 251.47deg);
+  color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-html.dark-mode body {
-  color: red;
 }
 
 /**
@@ -115,10 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: block;
   font-family: var(--font-heading, var(--font-body));
-  color: oklch(36.1% 0.046 251.47deg);
-}
-html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 {
-  color: red;
+  color: var(--color-primary);
 }
 
 h5 {
@@ -157,6 +151,10 @@ h5, h6 {
 .list-heading {
   font-size: 3rem;
   line-height: 1;
+  color: var(--color-primary);
+}
+html.dark-mode .list-heading {
+  color: oklch(96.6% 0.009 258.36deg);
 }
 
 h2.list-heading {
@@ -578,7 +576,12 @@ span.sep {
   position: relative;
   margin-inline-end: 6px;
   pointer-events: none;
+}
+.svg-icon:not(.lucide) {
   fill: currentColor;
+}
+.svg-icon.lucide {
+  stroke-width: 2px;
 }
 
 table {

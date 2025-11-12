@@ -177,7 +177,7 @@
 
     background-color: var(--color-primary);
 
-    @include mixins.lightDark(box-shadow, 0 0 0 6px #F2F2F2, 0 0 0 6px #111);
+    @include mixins.lightDark(box-shadow, 0 0 0 6px colors.$color-secondary-50, 0 0 0 6px colors.$color-secondary-900);
     z-index: 1;
     @include mixins.rtl {
       left: auto;

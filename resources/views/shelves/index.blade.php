@@ -11,7 +11,9 @@
         <div class="icon-list text-link">
             @if(userCan('bookshelf-create-all'))
                 <a href="{{ url("/create-shelf") }}" data-shortcut="new" class="icon-list-item">
-                    <span>@icon('add')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="plus"></i>
+                    </span>
                     <span>{{ trans('entities.shelves_new_action') }}</span>
                 </a>
             @endif
@@ -19,7 +21,9 @@
             @include('entities.view-toggle', ['view' => $view, 'type' => 'bookshelves'])
 
             <a href="{{ url('/tags') }}" class="icon-list-item">
-                <span>@icon('tag')</span>
+                <span>
+                    <i class="svg-icon" data-lucide="tags"></i>
+                </span>
                 <span>{{ trans('entities.tags_view_tags') }}</span>
             </a>
         </div>

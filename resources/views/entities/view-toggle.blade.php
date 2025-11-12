@@ -6,12 +6,16 @@
 
         @if ($view === 'list')
             <button type="submit" name="view" value="grid" class="icon-list-item text-link">
-                <span class="icon">@icon('grid')</span>
+                <span>
+                    <i class="svg-icon" data-lucide="layout-grid"></i>
+                </span>
                 <span>{{ trans('common.grid_view') }}</span>
             </button>
         @else
             <button type="submit" name="view" value="list" class="icon-list-item text-link">
-                <span class="icon">@icon('list')</span>
+                <span>
+                    <i class="svg-icon" data-lucide="list"></i>
+                </span>
                 <span>{{ trans('common.list_view') }}</span>
             </button>
         @endif

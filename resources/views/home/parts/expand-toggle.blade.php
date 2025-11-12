@@ -9,7 +9,9 @@ $key - Unique key for checking existing stored state.
         option:expand-toggle:is-open="{{ $isOpen ? 'true' : 'false' }}"
         type="button"
         class="icon-list-item {{ $classes ?? '' }}">
-    <span>@icon('expand-text')</span>
+    <span>
+        <i class="svg-icon" data-lucide="list-chevrons-up-down"></i>
+    </span>
     <span>{{ trans('common.toggle_details') }}</span>
 </button>
 @if($isOpen)

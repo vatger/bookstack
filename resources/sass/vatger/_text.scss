@@ -1,6 +1,7 @@
 @use "mixins";
 @use "vars";
 @use "tailwind";
+@use "colors";
 
 
 /**
@@ -85,6 +86,7 @@ h5, h6 {
 
 .list-heading {
   @include tailwind.text-5xl();
+  @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
 }
 
 h2.list-heading {
@@ -450,5 +452,12 @@ span.sep {
   position: relative;
   margin-inline-end: vars.$xs;
   pointer-events: none;
-  fill: currentColor;
+
+  &:not(.lucide) {
+    fill: currentColor;
+  }
+
+  &.lucide {
+    stroke-width: 2px;
+  }
 }

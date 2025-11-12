@@ -20,7 +20,7 @@
     <main class="card content-wrap">
 
         <div class="flex-container-row wrap v-center">
-            <h1 class="flex fit-content break-text">{{ $shelf->name }}</h1>
+            <h1 class="flex fit-content break-text list-heading">{{ $shelf->name }}</h1>
             <div class="flex"></div>
             <div class="flex fit-content text-m-right my-m ml-m">
                 @include('common.sort', $listOptions->getSortControlData())
@@ -113,7 +113,9 @@
 
             @if(userCan('book-create-all') && userCan('bookshelf-update', $shelf))
                 <a href="{{ $shelf->getUrl('/create-book') }}" data-shortcut="new" class="icon-list-item">
-                    <span class="icon">@icon('add')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="plus"></i>
+                    </span>
                     <span>{{ trans('entities.books_new_action') }}</span>
                 </a>
             @endif
@@ -124,21 +126,27 @@
 
             @if(userCan('bookshelf-update', $shelf))
                 <a href="{{ $shelf->getUrl('/edit') }}" data-shortcut="edit" class="icon-list-item">
-                    <span>@icon('edit')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="pen-line"></i>
+                    </span>
                     <span>{{ trans('common.edit') }}</span>
                 </a>
             @endif
 
             @if(userCan('restrictions-manage', $shelf))
                 <a href="{{ $shelf->getUrl('/permissions') }}" data-shortcut="permissions" class="icon-list-item">
-                    <span>@icon('lock')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="lock"></i>
+                    </span>
                     <span>{{ trans('entities.permissions') }}</span>
                 </a>
             @endif
 
             @if(userCan('bookshelf-delete', $shelf))
                 <a href="{{ $shelf->getUrl('/delete') }}" data-shortcut="delete" class="icon-list-item">
-                    <span>@icon('delete')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="trash-2"></i>
+                    </span>
                     <span>{{ trans('common.delete') }}</span>
                 </a>
             @endif

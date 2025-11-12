@@ -1,7 +1,9 @@
 <div class="entity-meta">
     @if($entity->isA('revision'))
         <div class="entity-meta-item">
-            @icon('history')
+            <span>
+                <i class="svg-icon" data-lucide="history"></i>
+            </span>
             <div>
                 {{ trans('entities.pages_revision') }}
                 {{ trans('entities.pages_revisions_number') }}{{ $entity->revision_number == 0 ? '' : $entity->revision_number }}
@@ -17,7 +19,9 @@
 
     @if ($entity->ownedBy && $entity->owned_by !== $entity->created_by)
         <div class="entity-meta-item">
-            @icon('user')
+            <span>
+                <i class="svg-icon" data-lucide="user"></i>
+            </span>
             <div>
                 {!! trans('entities.meta_owned_name', [
                     'user' => "<a href='{$entity->ownedBy->getProfileUrl()}'>".e($entity->ownedBy->name). "</a>"
@@ -28,7 +32,9 @@
 
     @if ($entity->createdBy)
         <div class="entity-meta-item">
-            @icon('star')
+            <span>
+                <i class="svg-icon" data-lucide="user"></i>
+            </span>
             <div>
                 {!! trans('entities.meta_created_name', [
                     'timeLength' => '<span title="'.$entity->created_at->toDayDateTimeString().'">'.$entity->created_at->diffForHumans() . '</span>',
@@ -38,14 +44,18 @@
         </div>
     @else
         <div class="entity-meta-item">
-            @icon('star')
+            <span>
+                <i class="svg-icon" data-lucide="history"></i>
+            </span>
             <span title="{{$entity->created_at->toDayDateTimeString()}}">{{ trans('entities.meta_created', ['timeLength' => $entity->created_at->diffForHumans()]) }}</span>
         </div>
     @endif
 
     @if ($entity->updatedBy)
         <div class="entity-meta-item">
-            @icon('edit')
+            <span>
+                <i class="svg-icon" data-lucide="pen-line"></i>
+            </span>
             <div>
                 {!! trans('entities.meta_updated_name', [
                     'timeLength' => '<span title="' . $entity->updated_at->toDayDateTimeString() .'">' . $entity->updated_at->diffForHumans() .'</span>',
@@ -55,14 +65,18 @@
         </div>
     @elseif (!$entity->isA('revision'))
         <div class="entity-meta-item">
-            @icon('edit')
+            <span>
+                <i class="svg-icon" data-lucide="pen-line"></i>
+            </span>
             <span title="{{ $entity->updated_at->toDayDateTimeString() }}">{{ trans('entities.meta_updated', ['timeLength' => $entity->updated_at->diffForHumans()]) }}</span>
         </div>
     @endif
 
     @if($referenceCount ?? 0)
         <a href="{{ $entity->getUrl('/references') }}" class="entity-meta-item">
-            @icon('reference')
+            <span>
+                <i class="svg-icon" data-lucide="folder-symlink"></i>
+            </span>
             <div>
                 {{ trans_choice('entities.meta_reference_count', $referenceCount, ['count' => $referenceCount]) }}
             </div>

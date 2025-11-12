@@ -24,7 +24,7 @@
     </div>
 
     <main class="content-wrap card">
-        <h1 class="break-text">{{$book->name}}</h1>
+        <h1 class="break-text list-heading">{{$book->name}}</h1>
         <div refs="entity-search@contentView" class="book-content">
             <div class="text-muted break-text">{!! $book->descriptionHtml() !!}</div>
             @if(count($bookChildren) > 0)
@@ -95,13 +95,17 @@
 
             @if(userCan('page-create', $book))
                 <a href="{{ $book->getUrl('/create-page') }}" data-shortcut="new" class="icon-list-item">
-                    <span>@icon('add')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="plus"></i>
+                    </span>
                     <span>{{ trans('entities.pages_new') }}</span>
                 </a>
             @endif
             @if(userCan('chapter-create', $book))
                 <a href="{{ $book->getUrl('/create-chapter') }}" data-shortcut="new" class="icon-list-item">
-                    <span>@icon('add')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="plus"></i>
+                    </span>
                     <span>{{ trans('entities.chapters_new') }}</span>
                 </a>
             @endif
@@ -110,29 +114,39 @@
 
             @if(userCan('book-update', $book))
                 <a href="{{ $book->getUrl('/edit') }}" data-shortcut="edit" class="icon-list-item">
-                    <span>@icon('edit')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="pen-line"></i>
+                    </span>
                     <span>{{ trans('common.edit') }}</span>
                 </a>
                 <a href="{{ $book->getUrl('/sort') }}" data-shortcut="sort" class="icon-list-item">
-                    <span>@icon('sort')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="arrow-down-narrow-wide"></i>
+                    </span>
                     <span>{{ trans('common.sort') }}</span>
                 </a>
             @endif
             @if(userCan('book-create-all'))
                 <a href="{{ $book->getUrl('/copy') }}" data-shortcut="copy" class="icon-list-item">
-                    <span>@icon('copy')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="copy"></i>
+                    </span>
                     <span>{{ trans('common.copy') }}</span>
                 </a>
             @endif
             @if(userCan('restrictions-manage', $book))
                 <a href="{{ $book->getUrl('/permissions') }}" data-shortcut="permissions" class="icon-list-item">
-                    <span>@icon('lock')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="lock"></i>
+                    </span>
                     <span>{{ trans('entities.permissions') }}</span>
                 </a>
             @endif
             @if(userCan('book-delete', $book))
                 <a href="{{ $book->getUrl('/delete') }}" data-shortcut="delete" class="icon-list-item">
-                    <span>@icon('delete')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="trash-2"></i>
+                    </span>
                     <span>{{ trans('common.delete') }}</span>
                 </a>
             @endif

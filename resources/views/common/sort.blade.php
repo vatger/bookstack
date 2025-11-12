@@ -42,7 +42,16 @@
             </div>
             <button class="list-sort-dir" type="button" data-sort-dir
                     aria-label="{{ trans('common.sort_direction_toggle') }} - {{ $order === 'asc' ? trans('common.sort_ascending') : trans('common.sort_descending') }}" tabindex="0">
-                @icon($order === 'desc' ? 'sort-up' : 'sort-down')
+
+                    @if($order === 'desc')
+                        <span>
+                            <i class="svg-icon" data-lucide="arrow-down"></i>
+                        </span>
+                    @else
+                        <span>
+                            <i class="svg-icon" data-lucide="arrow-up"></i>
+                        </span>
+                    @endif
             </button>
         </div>
     </form>

@@ -81,12 +81,16 @@
                 <div class="active-restriction">
                     @if(userCan('restrictions-manage', $book))
                         <a href="{{ $book->getUrl('/permissions') }}" class="entity-meta-item">
-                            @icon('lock')
+                            <span>
+                                <i class="svg-icon" data-lucide="lock"></i>
+                            </span>
                             <div>{{ trans('entities.books_permissions_active') }}</div>
                         </a>
                     @else
                         <div class="entity-meta-item">
-                            @icon('lock')
+                            <span>
+                                <i class="svg-icon" data-lucide="lock"></i>
+                            </span>
                             <div>{{ trans('entities.books_permissions_active') }}</div>
                         </div>
                     @endif
@@ -97,12 +101,16 @@
                 <div class="active-restriction">
                     @if(userCan('restrictions-manage', $page->chapter))
                         <a href="{{ $page->chapter->getUrl('/permissions') }}" class="entity-meta-item">
-                            @icon('lock')
+                            <span>
+                                <i class="svg-icon" data-lucide="lock"></i>
+                            </span>
                             <div>{{ trans('entities.chapters_permissions_active') }}</div>
                         </a>
                     @else
                         <div class="entity-meta-item">
-                            @icon('lock')
+                            <span>
+                                <i class="svg-icon" data-lucide="lock"></i>
+                            </span>
                             <div>{{ trans('entities.chapters_permissions_active') }}</div>
                         </div>
                     @endif
@@ -113,12 +121,16 @@
                 <div class="active-restriction">
                     @if(userCan('restrictions-manage', $page))
                         <a href="{{ $page->getUrl('/permissions') }}" class="entity-meta-item">
-                            @icon('lock')
+                            <span>
+                                <i class="svg-icon" data-lucide="lock"></i>
+                            </span>
                             <div>{{ trans('entities.pages_permissions_active') }}</div>
                         </a>
                     @else
                         <div class="entity-meta-item">
-                            @icon('lock')
+                            <span>
+                                <i class="svg-icon" data-lucide="lock"></i>
+                            </span>
                             <div>{{ trans('entities.pages_permissions_active') }}</div>
                         </div>
                     @endif
@@ -142,37 +154,49 @@
             {{--User Actions--}}
             @if(userCan('page-update', $page))
                 <a href="{{ $page->getUrl('/edit') }}" data-shortcut="edit" class="icon-list-item">
-                    <span>@icon('edit')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="pen-line"></i>
+                    </span>
                     <span>{{ trans('common.edit') }}</span>
                 </a>
             @endif
             @if(userCanOnAny('create', \BookStack\Entities\Models\Book::class) || userCanOnAny('create', \BookStack\Entities\Models\Chapter::class) || userCan('page-create-all') || userCan('page-create-own'))
                 <a href="{{ $page->getUrl('/copy') }}" data-shortcut="copy" class="icon-list-item">
-                    <span>@icon('copy')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="copy"></i>
+                    </span>
                     <span>{{ trans('common.copy') }}</span>
                 </a>
             @endif
             @if(userCan('page-update', $page))
                 @if(userCan('page-delete', $page))
 	                <a href="{{ $page->getUrl('/move') }}" data-shortcut="move" class="icon-list-item">
-	                    <span>@icon('folder')</span>
+	                    <span>
+                            <i class="svg-icon" data-lucide="folder-output"></i>
+                        </span>
 	                    <span>{{ trans('common.move') }}</span>
 	                </a>
                 @endif
             @endif
             <a href="{{ $page->getUrl('/revisions') }}" data-shortcut="revisions" class="icon-list-item">
-                <span>@icon('history')</span>
+                <span>
+                    <i class="svg-icon" data-lucide="history"></i>
+                </span>
                 <span>{{ trans('entities.revisions') }}</span>
             </a>
             @if(userCan('restrictions-manage', $page))
                 <a href="{{ $page->getUrl('/permissions') }}" data-shortcut="permissions" class="icon-list-item">
-                    <span>@icon('lock')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="lock"></i>
+                    </span>
                     <span>{{ trans('entities.permissions') }}</span>
                 </a>
             @endif
             @if(userCan('page-delete', $page))
                 <a href="{{ $page->getUrl('/delete') }}" data-shortcut="delete" class="icon-list-item">
-                    <span>@icon('delete')</span>
+                    <span>
+                        <i class="svg-icon" data-lucide="trash-2"></i>
+                    </span>
                     <span>{{ trans('common.delete') }}</span>
                 </a>
             @endif

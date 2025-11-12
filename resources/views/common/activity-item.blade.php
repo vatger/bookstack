@@ -1,10 +1,8 @@
 
 {{--Requires an Activity item with the name $activity passed in--}}
 
-<div>
-    @if($activity->user)
-    <img class="avatar" src="{{ $activity->user->getAvatar(30) }}" alt="{{ $activity->user->name }}">
-    @endif
+<div style="display: flex; width: 20px;">
+    <i class="svg-icon" style="width: 100%; height: auto; stroke-width: 2px; margin-inline-end: 0" data-lucide="circle-user-round"></i>
 </div>
 
 <div>

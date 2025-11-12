@@ -5,9 +5,21 @@
  * Background colors
  */
 
-.primary-background {
+.primary-background:not(hr) {
   @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
   //background-color: colors.$color-secondary-50;
+}
+
+.icon-list hr {
+  height: 1px !important;
+}
+
+.actions hr {
+  @include mixins.lightDark(background-color, colors.$color-secondary-600, colors.$color-secondary-600, true);
+}
+
+.card hr {
+  @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-800, true);
 }
 
 .primary-background-light {
@@ -50,7 +62,7 @@
 }
 
 .text-muted {
-  @include mixins.lightDark(color, var(--color-primary), colors.$color-secondary-700, true);
+  @include mixins.lightDark(color, colors.$color-primary-700, colors.$color-secondary-400, true);
   fill: currentColor !important;
 }
 
