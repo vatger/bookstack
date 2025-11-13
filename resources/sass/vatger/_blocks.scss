@@ -71,7 +71,7 @@
 .card.drag-card {
   border: 1px solid #DDD;
   @include mixins.lightDark(border-color, #ddd, #000);
-  @include mixins.lightDark(background-color, #fff, #333);
+  @include mixins.lightDark(background-color, #fff, colors.$color-secondary-700);
   border-radius: 4px;
   display: flex;
   padding: 0 0 0 (vars.$s + 28px);
@@ -92,7 +92,7 @@
     padding: 0 vars.$xs;
 
     &:hover {
-      @include mixins.lightDark(background-color, #eee, #2d2d2d);
+      @include mixins.lightDark(background-color, #eee, colors.$color-secondary-600);
     }
 
     .svg-icon {
@@ -110,7 +110,7 @@
   }
 
   .handle {
-    @include mixins.lightDark(background-color, #eee, #2d2d2d);
+    @include mixins.lightDark(background-color, #eee, colors.$color-secondary-700);
     left: 0;
     position: absolute;
     top: 0;

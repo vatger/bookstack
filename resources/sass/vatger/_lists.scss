@@ -781,7 +781,7 @@ ul.pagination {
   list-style: none;
   inset-inline-end: 0;
   margin: vars.$m 0;
-  @include mixins.lightDark(background-color, #fff, colors.$color-secondary-950);
+  @include mixins.lightDark(background-color, #fff, colors.$color-secondary-900);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
   border-radius: 3px;
   min-width: 180px;

@@ -1,5 +1,6 @@
 @use "mixins";
 @use "vars";
+@use "colors";
 
 .page-editor {
   display: flex;
@@ -310,7 +311,7 @@ body.tox-fullscreen, body.markdown-fullscreen {
 
 // Page editor sidebar toolbox
 .floating-toolbox {
-  @include mixins.lightDark(background-color, #FFF, #222);
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-700);
   overflow: hidden;
   align-items: stretch;
   flex-direction: row;
@@ -354,7 +355,7 @@ body.tox-fullscreen, body.markdown-fullscreen {
     margin-inline-end: -1px;
   }
   .tabs-inner {
-    @include mixins.lightDark(background-color, #FFFFFF, #222);
+    @include mixins.lightDark(background-color, #FFFFFF, colors.$color-secondary-700);
   }
   .tabs svg {
     padding: 0;

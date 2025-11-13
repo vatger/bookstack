@@ -230,7 +230,7 @@ $loadingSize: 10px;
     grid-template-columns: minmax(120px, max-content) 40px;
     font-size: 0.9rem;
     border: 2px solid #DDD;
-    @include mixins.lightDark(border-color, #ddd, #444);
+    @include mixins.lightDark(border-color, colors.$color-primary-100, colors.$color-secondary-700);
     border-radius: 4px;
   }
   .list-sort-label {
@@ -250,7 +250,7 @@ $loadingSize: 10px;
   .list-sort-dir {
     border-inline-start: 2px solid #DDD;
     color: #888;
-    @include mixins.lightDark(border-color, #ddd, #444);
+    @include mixins.lightDark(border-color, colors.$color-primary-100, colors.$color-secondary-700);
     .svg-icon {
       transition: transform ease-in-out 120ms;
     }

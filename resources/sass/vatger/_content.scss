@@ -212,9 +212,9 @@ body .page-content img,
   }
 
   &.warning {
-    @include mixins.lightDark(border-color, vars.$warning, vars.$warning-dark);
+    @include mixins.lightDark(border-color, vars.$warning, colors.$color-warning-700);
     @include mixins.lightDark(background-color, colors.$color-warning-200, colors.$color-warning-900);
-    @include mixins.lightDark(color, #6a2802, vars.$warning-dark);
+    @include mixins.lightDark(color, colors.$color-warning-900, colors.$color-warning-700);
   }
 
   &.warning:before {

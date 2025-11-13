@@ -64,27 +64,27 @@ button.icon-list-item {
   }
 }
 
-.button.outline {
-  background-color: transparent;
-  @include mixins.lightDark(color, #666, #AAA);
-  fill: currentColor;
-  border: 1px solid;
-  @include mixins.lightDark(border-color, #CCC, #666);
-  &:hover, &:focus, &:active {
-    @include mixins.lightDark(color, #444, #BBB);
-    border: 1px solid #CCC;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-    background-color: #F2F2F2;
-    @include mixins.lightDark(background-color, #f8f8f8, #444);
-    filter: none;
-  }
-  &:active {
-    border-color: #BBB;
-    background-color: #DDD;
-    color: #666;
-    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
-  }
-}
+// .button.outline {
+//   background-color: transparent;
+//   @include mixins.lightDark(color, #666, #AAA);
+//   fill: currentColor;
+//   border: 1px solid;
+//   //@include mixins.lightDark(border-color, #CCC, #666);
+//   &:hover, &:focus, &:active {
+//     @include mixins.lightDark(color, #444, #BBB);
+//     border: 1px solid #CCC;
+//     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+//     background-color: #F2F2F2;
+//     @include mixins.lightDark(background-color, #f8f8f8, #444);
+//     filter: none;
+//   }
+//   &:active {
+//     border-color: #BBB;
+//     background-color: #DDD;
+//     color: #666;
+//     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+//   }
+// }
 
 .button + .button {
   margin-inline-start: vars.$s;

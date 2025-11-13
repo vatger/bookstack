@@ -117,10 +117,10 @@ a {
     display: inline-block;
   }
 
-  &:focus img:only-child {
-    outline: 2px dashed var(--color-link);
-    outline-offset: 2px;
-  }
+  // &:focus img:only-child {
+  //   outline: 2px dashed var(--color-link);
+  //   outline-offset: 2px;
+  // }
 }
 
 a.no-link-style {
@@ -150,7 +150,7 @@ p, ul, ol, pre, table, blockquote {
 hr {
   border: 0;
   height: 1px;
-  @include mixins.lightDark(background, #eaeaea, #555);
+  @include mixins.lightDark(background, #eaeaea, colors.$color-secondary-100);
   margin-bottom: vars.$l;
 
   &.faded {

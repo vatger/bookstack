@@ -18,8 +18,8 @@
   @include mixins.lightDark(background-color, colors.$color-secondary-600, colors.$color-secondary-600, true);
 }
 
-.card hr {
-  @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-800, true);
+.card hr, .sub-card hr {
+  @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-700, true);
 }
 
 .primary-background-light {
@@ -67,7 +67,7 @@
 }
 
 .text-dark {
-  @include mixins.lightDark(color, red, red, true);
+ // @include mixins.lightDark(color, red, red, true);
   fill: currentColor !important;
 }
 
