@@ -21,7 +21,7 @@ export class WysiwygEditorTinymce extends Component {
         });
 
         window.$events.emitPublic(this.elem, 'editor-tinymce::pre-init', {config: this.tinyMceConfig});
-        window.tinymce.init(this.tinyMceConfig).then(editors => {
+        window.tinymce.init({...this.tinyMceConfig, content_css: "dist/styles.css"}).then(editors => {
             this.editor = editors[0];
         });
     }

@@ -7,8 +7,11 @@
  * Card-style blocks
  */
 
+/* rgb(54, 57, 66)*/
+
 .card {
-  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-950);
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-800);
+  //@include mixins.lightDark(background-color, #FFF, rgb(54, 57, 66));
   box-shadow: vars.$bs-card;
   border-radius: vars.$header-link-border-radius;
   break-inside: avoid;

@@ -7,7 +7,7 @@
  * Styles specific to blocks used within page content.
  */
 
-.page-content {
+.page-content:not(#tinymce) {
   width: 100%;
   max-width: 840px;
   margin: 0 auto;

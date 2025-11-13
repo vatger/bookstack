@@ -830,11 +830,17 @@ ul.pagination {
 
   .icon-item, .text-item, .label-item {
     padding: 8px vars.$m;
-    @include mixins.lightDark(color, #555, #eee);
+    color: var(--color-primary);
     fill: currentColor;
     white-space: nowrap;
     line-height: 1.4;
     cursor: pointer;
+
+    font-weight: vars.$header-font-weight;
+
+    span svg {
+      font-weight: vars.$header-font-weight;
+    }
 
     &.break-text {
       white-space: normal;
