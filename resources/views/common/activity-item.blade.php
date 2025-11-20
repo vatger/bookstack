@@ -1,10 +1,6 @@
 
 {{--Requires an Activity item with the name $activity passed in--}}
 
-<div style="display: flex; width: 20px;">
-    <i class="svg-icon" style="width: 100%; height: auto; stroke-width: 2px; margin-inline-end: 0" data-lucide="circle-user-round"></i>
-</div>
-
 <div>
     @if($activity->user)
         <a href="{{ $activity->user->getProfileUrl() }}">{{ $activity->user->name }}</a>

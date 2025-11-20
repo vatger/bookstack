@@ -411,7 +411,7 @@ details.sort-box[open] summary .caret-container svg {
 .activity-list-item {
   padding: vars.$s 0;
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: vars.$m;
   font-size: 0.9em;
 }
@@ -781,16 +781,22 @@ ul.pagination {
   list-style: none;
   inset-inline-end: 0;
   margin: vars.$m 0;
-  @include mixins.lightDark(background-color, #fff, colors.$color-secondary-900);
+  @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
-  border-radius: 3px;
+  border-radius: vars.$dropdown-border-radius;
   min-width: 180px;
-  padding: vars.$xs 0;
+  padding: 0;
   @include mixins.lightDark(color, #555, #eee);
   fill: currentColor;
   text-align: start !important;
   max-height: 500px;
   overflow-y: auto;
+
+  li:not(:last-child) {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    @include mixins.lightDark(border-bottom-color, colors.$color-secondary-100, colors.$color-secondary-800);
+  }
 
   &.anchor-left {
     inset-inline-end: auto;
@@ -829,7 +835,7 @@ ul.pagination {
   }
 
   .icon-item, .text-item, .label-item {
-    padding: 8px vars.$m;
+    padding: 9px vars.$m;
     color: var(--color-primary);
     fill: currentColor;
     white-space: nowrap;

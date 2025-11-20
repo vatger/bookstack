@@ -25,7 +25,28 @@
     border: 1px solid var(--color-positive);
   }
   &.disabled, &[disabled] {
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAMUlEQVQIW2NkwAGuXbv2nxGbHEhCS0uLEUMSJgHShCKJLIEiiS4Bl8QmAZbEJQGSBAC62BuJ+tt7zgAAAABJRU5ErkJggg==);
+    user-select: none;
+
+    @include mixins.lightDark(background-image,
+      repeating-linear-gradient(
+        -45deg,
+        colors.$color-secondary-100 0,
+        colors.$color-secondary-100 2px,
+        transparent 2px,
+        transparent 10px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        colors.$color-secondary-700 0,
+        colors.$color-secondary-700 2px,
+        transparent 2px,
+        transparent 10px
+      ),
+    );
+
+    &:hover {
+      cursor: not-allowed;
+    }
   }
   &[readonly] {
     background-color: #f8f8f8;

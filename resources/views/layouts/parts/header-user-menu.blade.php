@@ -12,7 +12,7 @@
                role="menuitem"
                data-shortcut="favourites_view"
                class="icon-item">
-                @icon('star')
+                <i class="svg-icon dropdown-icon" data-lucide="star"></i>
                 <div>{{ trans('entities.my_favourites') }}</div>
             </a>
         </li>
@@ -21,7 +21,7 @@
                role="menuitem"
                data-shortcut="profile_view"
                class="icon-item">
-                @icon('user')
+                <i class="svg-icon dropdown-icon" data-lucide="contact-round"></i>
                 <div>{{ trans('common.view_profile') }}</div>
             </a>
         </li>
@@ -29,15 +29,13 @@
             <a href="{{ url('/my-account') }}"
                role="menuitem"
                class="icon-item">
-                @icon('user-preferences')
+                <i class="svg-icon dropdown-icon" data-lucide="user-round-cog"></i>
                 <div>{{ trans('preferences.my_account') }}</div>
             </a>
         </li>
-        <li role="presentation"><hr></li>
         <li>
             @include('common.dark-mode-toggle', ['classes' => 'icon-item', 'buttonRole' => 'menuitem'])
         </li>
-        <li role="presentation"><hr></li>
         <li>
             @php
                 $logoutPath = match (config('auth.method')) {

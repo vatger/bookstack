@@ -43,13 +43,13 @@
                     @endif
                 </div>
 
+                {{--
                 <div class="grid half gap-xl">
                     <div>
                         <label for="user-avatar"
                                class="setting-list-label">{{ trans('settings.users_avatar') }}</label>
                         <p class="text-small">{{ trans('preferences.profile_avatar_desc') }}</p>
                     </div>
-                    {{--
                     <div>
                         @include('form.image-picker', [
                             'resizeHeight' => '512',
@@ -62,8 +62,8 @@
                             'imageClass' => 'avatar large'
                         ])
                     </div>
-                    --}}
                 </div>
+                --}}
 
                 @include('users.parts.language-option-row', ['value' => old('language') ?? user()->getLocale()->appLocale()])
 

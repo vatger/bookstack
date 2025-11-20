@@ -32,15 +32,11 @@ button.icon-list-item {
   font-weight: 400;
   outline: 0;
   cursor: pointer;
-  transition: background-color ease-in-out 120ms,
-    filter ease-in-out 120ms,
-    box-shadow ease-in-out 120ms;
   box-shadow: none;
 
-  border: 1px solid var(--color-primary);
+  transition: background-color 100ms ease-in-out;
 
   @include mixins.lightDark(background-color, var(--color-primary), colors.$color-primary-900);
-  @include mixins.lightDark(border-color, var(--color-primary), colors.$color-primary-900);
   @include mixins.lightDark(color, #FFF, colors.$color-primary-50);
 
   vertical-align: top;
@@ -50,8 +46,7 @@ button.icon-list-item {
     color: #FFFFFF;
   }
   &:hover {
-    @include mixins.lightDark(box-shadow, vars.$bs-light, vars.$bs-dark);
-    filter: brightness(110%);
+    @include mixins.lightDark(background-color, colors.$color-primary-800, colors.$color-primary-800);
   }
   &:focus {
     outline: 1px dotted currentColor;
@@ -61,6 +56,10 @@ button.icon-list-item {
   }
   &:active {
     outline: 0;
+  }
+
+  &#oidc-login {
+    margin-block: vars.$xl;
   }
 }
 

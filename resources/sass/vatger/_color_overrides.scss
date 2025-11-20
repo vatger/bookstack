@@ -18,7 +18,7 @@
   @include mixins.lightDark(background-color, colors.$color-secondary-600, colors.$color-secondary-600, true);
 }
 
-.card hr, .sub-card hr {
+.card hr, .sub-card hr, .dropdown-menu hr {
   @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-700, true);
 }
 

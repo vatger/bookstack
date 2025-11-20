@@ -460,4 +460,8 @@ span.sep {
   &.lucide {
     stroke-width: 2px;
   }
+
+  &.lucide.dropdown-icon {
+    margin-block: auto;
+  }
 }

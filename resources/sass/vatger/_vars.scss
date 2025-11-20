@@ -6,9 +6,10 @@
 
 $header-icon-size: 20px;
 $header-font-weight: 600;
-$header-link-border-radius: tailwind.$rounded-lg;
 
+$header-link-border-radius: tailwind.$rounded-lg;
 $input-border-radius: tailwind.$rounded-lg;
+$dropdown-border-radius: tailwind.$rounded-md;
 
 $text-primary: var(--color-primary);
 
