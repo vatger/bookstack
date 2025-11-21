@@ -4,7 +4,7 @@
     {{-- Show top level books item --}}
     @if (count($crumbs) > 0 && ($crumbs[0] ?? null) instanceof  \BookStack\Entities\Models\Book)
         <a href="{{  url('/books')  }}" class="text-book icon-list-item outline-hover">
-            <span>@icon('books')</span>
+            <span>@include('common.vatger-entity-icon', ['entity_type' => 'book'])</span>
             <span>{{ trans('entities.books') }}</span>
         </a>
         <?php $breadcrumbCount++; ?>
@@ -13,7 +13,7 @@
     {{-- Show top level shelves item --}}
     @if (count($crumbs) > 0 && ($crumbs[0] ?? null) instanceof  \BookStack\Entities\Models\Bookshelf)
         <a href="{{  url('/shelves')  }}" class="text-bookshelf icon-list-item outline-hover">
-            <span>@icon('bookshelf')</span>
+            <span>@include('common.vatger-entity-icon', ['entity_type' => 'bookshelf'])</span>
             <span>{{ trans('entities.shelves') }}</span>
         </a>
         <?php $breadcrumbCount++; ?>
@@ -26,7 +26,7 @@
             <?php continue; ?>
         @endif
         @if ($breadcrumbCount !== 0 && !$isEntity)
-            <div class="separator">@icon('chevron-right')</div>
+            <div class="separator"><i class="svg-icon" data-lucide="chevron-right"></i></div>
         @endif
 
         @if (is_string($crumb))
@@ -43,7 +43,7 @@
                 @include('entities.breadcrumb-listing', ['entity' => $crumb])
             @endif
             <a href="{{ $crumb->getUrl() }}" class="text-{{$crumb->getType()}} icon-list-item outline-hover">
-                <span>@icon($crumb->getType())</span>
+                <span>@include('common.vatger-entity-icon', ['entity_type' => $crumb->getType()])</span>
                 <span>
                     {{ $crumb->getShortName() }}
                 </span>

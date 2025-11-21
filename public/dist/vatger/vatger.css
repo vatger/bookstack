@@ -1097,12 +1097,13 @@ h5, h6 {
     font-size: 1.161616em;
   }
 }
-.list-heading {
+.card .list-heading, h1#bkmrk-page-title {
   font-size: 3rem;
   line-height: 1;
   color: var(--color-primary);
+  font-weight: bold;
 }
-html.dark-mode .list-heading {
+html.dark-mode .card .list-heading, html.dark-mode h1#bkmrk-page-title {
   color: oklch(96.6% 0.009 258.36deg);
 }
 
@@ -5643,6 +5644,7 @@ html.dark-mode .template-item .template-item-actions button {
 }
 
 .dropdown-search-toggle-breadcrumb {
+  display: flex;
   border: 1px solid transparent;
   border-radius: 4px;
   line-height: normal;
@@ -5659,6 +5661,8 @@ html.dark-mode .dropdown-search-toggle-breadcrumb:hover {
 }
 .dropdown-search-toggle-breadcrumb .svg-icon {
   margin-inline-end: 0;
+  width: 0.8em;
+  height: 0.8em;
 }
 
 .dropdown-search-toggle-select {
@@ -5699,20 +5703,29 @@ html.dark-mode .dropdown-search-toggle-breadcrumb:hover {
 }
 
 .dropdown-search-dropdown {
-  box-shadow: 0 1px 3px 1px rgba(76, 76, 76, 0.26);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
   overflow: hidden;
-  min-height: 100px;
   width: 240px;
   display: none;
+  background-color: oklch(95.8% 0.003 264.69deg) !important;
   position: absolute;
   z-index: 80;
   right: 0;
   top: 0;
   margin-top: 16px;
 }
+html.dark-mode .dropdown-search-dropdown {
+  background-color: oklch(30.1% 0.017 266.38deg) !important;
+}
 html[dir=rtl] .dropdown-search-dropdown {
   right: auto;
   left: -16px;
+}
+.dropdown-search-dropdown input[type=text] {
+  background-color: oklch(95.8% 0.003 264.69deg) !important;
+}
+html.dark-mode .dropdown-search-dropdown input[type=text] {
+  background-color: oklch(30.1% 0.017 266.38deg) !important;
 }
 .dropdown-search-dropdown .dropdown-search-search .svg-icon {
   position: absolute;
@@ -7081,7 +7094,7 @@ html.dark-mode .icon-list-item-dropdown-toggle:hover {
   border-radius: 0;
 }
 html.dark-mode .card .entity-list-item:not(.no-hover, .book-contents .entity-list-item):hover {
-  background-color: oklch(30.1% 0.017 266.38deg);
+  background-color: oklch(37.9% 0.022 267.47deg);
 }
 
 .card .entity-list-item .entity-list-item:hover {
@@ -7146,6 +7159,7 @@ html.dark-mode .entity-list-item-image .svg-icon {
 }
 .entity-list.compact h4, .entity-list.compact a {
   line-height: 1.2;
+  font-size: 0.9rem;
 }
 .entity-list.compact .entity-item-snippet {
   display: none;
@@ -7270,8 +7284,11 @@ html.dark-mode .dropdown-menu li:not(:last-child) {
 }
 .dropdown-menu .icon-item:hover, .dropdown-menu .icon-item:focus, .dropdown-menu .text-item:hover, .dropdown-menu .text-item:focus, .dropdown-menu .label-item:hover, .dropdown-menu .label-item:focus {
   text-decoration: none;
-  background-color: var(--color-primary-light);
+  background-color: oklch(92.2% 0.007 268.62deg) !important;
   color: var(--color-primary);
+}
+html.dark-mode .dropdown-menu .icon-item:hover, html.dark-mode .dropdown-menu .icon-item:focus, html.dark-mode .dropdown-menu .text-item:hover, html.dark-mode .dropdown-menu .text-item:focus, html.dark-mode .dropdown-menu .label-item:hover, html.dark-mode .dropdown-menu .label-item:focus {
+  background-color: oklch(37.9% 0.022 267.47deg) !important;
 }
 .dropdown-menu .icon-item:focus, .dropdown-menu .text-item:focus, .dropdown-menu .label-item:focus {
   outline: 1px solid var(--color-primary);

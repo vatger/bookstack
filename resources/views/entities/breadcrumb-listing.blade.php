@@ -7,7 +7,7 @@
             aria-haspopup="true"
             aria-expanded="false"
             title="{{ trans('entities.breadcrumb_siblings_for_' . $entity->getType()) }}">
-        <div role="presentation" class="separator">@icon('chevron-right')</div>
+        <div role="presentation" class="separator"><i class="svg-icon" data-lucide="chevron-right"></i></div>
     </button>
     <div refs="dropdown@menu" class="dropdown-search-dropdown card">
         <div class="dropdown-search-search">

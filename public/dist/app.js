@@ -28058,6 +28058,19 @@ var createIcons = ({
 
 // resources/js/lucide.ts
 createIcons({ icons: iconsAndAliases_exports });
+var observer = new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    const el2 = mutation.target instanceof HTMLElement ? mutation.target : mutation.target.parentElement;
+    if (mutation.type == "childList" && el2?.querySelector("i[data-lucide]") !== null) {
+      console.log(`${(/* @__PURE__ */ new Date()).toISOString()} :: Updating Icons due to DOM change`);
+      createIcons({ icons: iconsAndAliases_exports });
+    }
+  }
+});
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
 
 // resources/js/app.ts
 window.__DEV__ = false;

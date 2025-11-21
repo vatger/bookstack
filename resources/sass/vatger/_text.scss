@@ -84,9 +84,15 @@ h5, h6 {
   }
 }
 
-.list-heading {
+//.list-heading {
+//  @include tailwind.text-5xl();
+//  @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
+//}
+
+.card .list-heading, h1#bkmrk-page-title {
   @include tailwind.text-5xl();
   @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
+  font-weight: bold;
 }
 
 h2.list-heading {

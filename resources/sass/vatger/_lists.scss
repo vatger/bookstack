@@ -652,7 +652,7 @@ ul.pagination {
 }
 
 .card .entity-list-item:not(.no-hover, .book-contents .entity-list-item):hover {
-  @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-900);
+  @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-800);
   border-radius: 0;
 }
 
@@ -719,6 +719,7 @@ ul.pagination {
 
   h4, a {
     line-height: 1.2;
+    font-size: 0.9rem;
   }
 
   .entity-item-snippet {
@@ -782,7 +783,7 @@ ul.pagination {
   inset-inline-end: 0;
   margin: vars.$m 0;
   @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
+  box-shadow: vars.$box-shadow-dropdowns;
   border-radius: vars.$dropdown-border-radius;
   min-width: 180px;
   padding: 0;
@@ -856,7 +857,7 @@ ul.pagination {
 
     &:hover, &:focus {
       text-decoration: none;
-      background-color: var(--color-primary-light);
+      @include mixins.lightDark(background-color, colors.$color-secondary-100, colors.$color-secondary-800, true);
       color: var(--color-primary);
     }
 

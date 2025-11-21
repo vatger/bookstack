@@ -13,7 +13,7 @@
     @foreach($shelf->visibleBooks as $book)
         <div>
             <a href="{{ $book->getUrl('?shelf=' . $shelf->id) }}" class="entity-chip text-book">
-                @icon('book')
+                <i class="svg-icon" data-lucide="book"></i>
                 {{ $book->name }}
             </a>
         </div>

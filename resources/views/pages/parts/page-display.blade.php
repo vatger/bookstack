@@ -1,6 +1,8 @@
 <div dir="auto">
 
-    <h1 class="break-text" id="bkmrk-page-title">{{$page->name}}</h1>
+    <h1 class="break-text" id="bkmrk-page-title" style="font-weight: bold; margin-top: 1rem">{{$page->name}}</h1>
+
+    <hr>
 
     <div style="clear:left;"></div>
 

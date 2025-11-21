@@ -148,12 +148,13 @@ h5, h6 {
     font-size: 1.161616em;
   }
 }
-.list-heading {
+.card .list-heading, h1#bkmrk-page-title {
   font-size: 3rem;
   line-height: 1;
   color: var(--color-primary);
+  font-weight: bold;
 }
-html.dark-mode .list-heading {
+html.dark-mode .card .list-heading, html.dark-mode h1#bkmrk-page-title {
   color: oklch(96.6% 0.009 258.36deg);
 }
 

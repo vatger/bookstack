@@ -7,6 +7,6 @@
     </div>
     <div>
         <span title="{{ trans_choice('settings.sort_rule_assigned_to_x_books', $rule->books_count ?? 0) }}"
-              class="flex fill-area min-width-xxs bold text-right text-book"><span class="opacity-60">@icon('book')</span>{{ $rule->books_count ?? 0 }}</span>
+              class="flex fill-area min-width-xxs bold text-right text-book"><span class="opacity-60"><i class="svg-icon" data-lucide="book"></i></span>{{ $rule->books_count ?? 0 }}</span>
     </div>
 </div>

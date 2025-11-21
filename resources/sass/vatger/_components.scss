@@ -2,6 +2,7 @@
 
 @use "mixins";
 @use "vars";
+@use "colors";
 
 
 // System wide notifications
@@ -900,6 +901,8 @@ body.flexbox-support #entity-selector-wrap .popup-body .form-group {
   position: relative;
 }
 .dropdown-search-toggle-breadcrumb {
+  display: flex;
+
   border: 1px solid transparent;
   border-radius: 4px;
   line-height: normal;
@@ -912,6 +915,9 @@ body.flexbox-support #entity-selector-wrap .popup-body .form-group {
   }
   .svg-icon {
     margin-inline-end: 0;
+
+    width: 0.8em;
+    height: 0.8em;
   }
 }
 .dropdown-search-toggle-select {
@@ -950,11 +956,11 @@ body.flexbox-support #entity-selector-wrap .popup-body .form-group {
 }
 
 .dropdown-search-dropdown {
-  box-shadow: vars.$bs-med;
+  box-shadow: vars.$box-shadow-dropdowns;
   overflow: hidden;
-  min-height: 100px;
   width: 240px;
   display: none;
+  @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
   position: absolute;
   z-index: 80;
   right: 0;
@@ -964,6 +970,11 @@ body.flexbox-support #entity-selector-wrap .popup-body .form-group {
     right: auto;
     left: -(vars.$m);
   }
+
+  input[type="text"] {
+    @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
+  }
+
   .dropdown-search-search .svg-icon {
     position: absolute;
     left: vars.$s;

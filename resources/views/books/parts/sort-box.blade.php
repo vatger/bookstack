@@ -5,7 +5,7 @@
                 @icon('caret-right')
             </div>
             <div class="entity-list-item no-hover py-s text-book px-none">
-                <span>@icon('book')</span>
+                <span><i class="svg-icon" data-lucide="book"></i></span>
                 <span>{{ $book->name }}</span>
             </div>
             <div class="flex-container-row items-center text-book">

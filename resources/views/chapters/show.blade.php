@@ -45,7 +45,7 @@
                         @endif
                         @if(userCan('book-update', $book))
                             <a href="{{ $book->getUrl('/sort') }}" class="icon-list-item text-book">
-                                <span class="icon">@icon('book')</span>
+                                <span class="icon"><i class="svg-icon" data-lucide="book"></i></span>
                                 <span>{{ trans('entities.books_empty_sort_current_book') }}</span>
                             </a>
                         @endif

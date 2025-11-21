@@ -14,7 +14,7 @@
             <div>
                 <div class="grid half no-gap mb-m">
                     <p class="mb-xs text-bookshelf">@icon('bookshelf'){{ trans('entities.shelves') }}: {{ $recycleStats['bookshelf'] }}</p>
-                    <p class="mb-xs text-book">@icon('book'){{ trans('entities.books') }}: {{ $recycleStats['book'] }}</p>
+                    <p class="mb-xs text-book"><i class="svg-icon" data-lucide="book"></i>{{ trans('entities.books') }}: {{ $recycleStats['book'] }}</p>
                     <p class="mb-xs text-chapter">@icon('chapter'){{ trans('entities.chapters') }}: {{ $recycleStats['chapter'] }}</p>
                     <p class="mb-xs text-page">@icon('page'){{ trans('entities.pages') }}: {{ $recycleStats['page'] }}</p>
                 </div>

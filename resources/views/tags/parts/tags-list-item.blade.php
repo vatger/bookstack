@@ -14,7 +14,7 @@
            class="flex fill-area min-width-xxs bold text-right text-chapter"><span class="opacity-60">@icon('chapter')</span>{{ $tag->chapter_count }}</a>
         <a href="{{ isset($tag->value) ? $tag->valueUrl() : $tag->nameUrl() . '+{type:book}' }}"
            title="{{ trans('entities.tags_assigned_books') }}"
-           class="flex fill-area min-width-xxs bold text-right text-book"><span class="opacity-60">@icon('book')</span>{{ $tag->book_count }}</a>
+           class="flex fill-area min-width-xxs bold text-right text-book"><span class="opacity-60"><i class="svg-icon" data-lucide="book"></i></span>{{ $tag->book_count }}</a>
         <a href="{{ isset($tag->value) ? $tag->valueUrl() : $tag->nameUrl() . '+{type:bookshelf}' }}"
            title="{{ trans('entities.tags_assigned_shelves') }}"
            class="flex fill-area min-width-xxs bold text-right text-bookshelf"><span class="opacity-60">@icon('bookshelf')</span>{{ $tag->shelf_count }}</a>
