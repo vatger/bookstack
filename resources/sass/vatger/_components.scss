@@ -110,13 +110,13 @@
 }
 
 .popup-body {
-  @include mixins.lightDark(background-color, #fff, #333);
+  @include mixins.lightDark(background-color, #FFF, #333);
   max-height: 90%;
   max-width: 1200px;
   width: 90%;
   height: auto;
   margin: 2% auto;
-  border-radius: 4px;
+  border-radius: vars.$input-border-radius;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
   z-index: 999;
@@ -149,9 +149,16 @@
   margin: 0;
   border-radius: 0;
   box-shadow: none;
-  color: #FFF;
+  color: var(--color-primary);
   padding: vars.$xs vars.$m;
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.popup-header {
+  @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
 }
 
 .popup-header button:not(.popup-header-close) {
@@ -163,11 +170,12 @@
 }
 
 .popup-footer {
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-800);
   justify-content: end;
-  background-color: var(--color-primary-light);
   min-height: 41px;
   button {
-    padding: 10px vars.$m;
+    margin: 10px vars.$m;
+    border-radius: vars.$input-border-radius;
   }
 }
 
@@ -187,9 +195,10 @@
   height: 40px;
   flex: 0;
   .popup-title {
-    color: #FFF;
+    color: var(--color-primary);
     margin-inline-end: auto;
     padding: 8px vars.$m;
+    font-weight: 600;
   }
   &.flex-container-row {
     display: flex !important;
@@ -1135,17 +1144,16 @@ $btt-size: 40px;
   max-height: 280px;
   overflow-y: scroll;
   border: 1px solid;
-  @include mixins.lightDark(border-color, #DDD, #000);
-  border-radius: 3px;
-  min-height: 20px;
-  @include mixins.lightDark(background-color, #EEE, #000);
+  border-top: none;
+  @include mixins.lightDark(border-color, colors.$color-secondary-300, colors.$color-secondary-950);
+  border-radius: 0 0 vars.$input-border-radius vars.$input-border-radius !important;
+  min-height: 30px;
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-800);
 }
 .scroll-box-item {
   border-bottom: 1px solid;
-  border-top: 1px solid;
-  @include mixins.lightDark(border-color, #DDD, #000);
-  margin-top: -1px;
-  @include mixins.lightDark(background-color, #FFF, #222);
+  @include mixins.lightDark(border-color, colors.$color-secondary-100, colors.$color-secondary-900);
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-800);
   display: flex;
   align-items: flex-start;
   padding: 1px;
@@ -1154,7 +1162,7 @@ $btt-size: 40px;
   }
   &:hover {
     cursor: pointer;
-    @include mixins.lightDark(background-color, #f8f8f8, #333);
+    @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-800);
   }
   &.items-center {
     align-items: center;
@@ -1190,15 +1198,14 @@ $btt-size: 40px;
 input.scroll-box-search, .scroll-box-header-item {
   font-size: 0.8rem;
   border: 1px solid;
-  @include mixins.lightDark(border-color, #DDD, #000);
-  @include mixins.lightDark(background-color, #FFF, #222);
-  margin-bottom: -1px;
-  border-radius: 3px 3px 0 0;
+  @include mixins.lightDark(border-color, colors.$color-secondary-300, colors.$color-secondary-950);
+  @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900);
+  border-radius: vars.$input-border-radius vars.$input-border-radius 0 0;
   width: 100%;
   max-width: 100%;
   height: auto;
   line-height: 1.4;
-  color: #666;
+  color: var(--color-primary);
 }
 
 .scroll-box-search + .scroll-box,

@@ -69,33 +69,33 @@ body {
  * Fonts
  */
 body, button, input, select, label, textarea {
-  font-family: var(--font-body);
+  font-family: var(--font-body), serif;
 }
 
 pre, #markdown-editor-input, .text-mono, .code-base, span.code, code {
-  font-family: var(--font-code);
+  font-family: var(--font-code), serif;
 }
 
 /*
  * Header Styles
  */
 h1 {
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 2.25rem;
+  line-height: 1.1111111111;
   margin-top: 0.48888889em;
   margin-bottom: 0.48888889em;
 }
 
 h2 {
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 1.875rem;
+  line-height: 1.2;
   margin-top: 0.8627451em;
   margin-bottom: 0.43137255em;
 }
 
 h3 {
-  font-size: 2.25rem;
-  line-height: 1.1111111111;
+  font-size: 1.5rem;
+  line-height: 1.3333333333;
   margin-top: 0.78571429em;
   margin-bottom: 0.43137255em;
 }
@@ -108,10 +108,10 @@ h4 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   display: block;
-  font-family: var(--font-heading, var(--font-body));
+  font-family: var(--font-heading, var(--font-body)), serif;
   color: var(--color-primary);
 }
 
@@ -148,18 +148,20 @@ h5, h6 {
     font-size: 1.161616em;
   }
 }
-.card .list-heading, h1#bkmrk-page-title {
+.card h1.list-heading, h1#bkmrk-page-title {
   font-size: 3rem;
   line-height: 1;
   color: var(--color-primary);
   font-weight: bold;
 }
-html.dark-mode .card .list-heading, html.dark-mode h1#bkmrk-page-title {
+html.dark-mode .card h1.list-heading, html.dark-mode h1#bkmrk-page-title {
   color: oklch(96.6% 0.009 258.36deg);
 }
 
-h2.list-heading {
-  font-size: 1.333rem;
+.card h2.list-heading {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-top: 1rem;
 }
 
 /*
@@ -300,22 +302,31 @@ blockquote {
   display: block;
   position: relative;
   border-left: 4px solid transparent;
-  border-left-color: var(--color-primary);
-  background-color: #f8f8f8;
-  padding: 12px 16px 12px 32px;
+  border-left-color: oklch(65.4% 0.181 18.94deg);
+  background-color: oklch(95.8% 0.003 264.69deg);
+  border-radius: 0.375rem;
+  padding: 16px 16px 16px 32px;
   overflow: auto;
 }
 html.dark-mode blockquote {
-  background-color: #333;
+  background-color: oklch(30.1% 0.017 266.38deg);
 }
 blockquote:before {
   content: "“";
   font-size: 2em;
   font-weight: bold;
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 12px;
-  color: #777;
+  color: oklch(65.4% 0.181 18.94deg);
+}
+blockquote :last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+blockquote :first-child {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .text-mono {
@@ -589,23 +600,36 @@ table {
   max-width: 100%;
 }
 table thead {
-  background-color: #f8f8f8;
+  background-color: oklch(84.5% 0.015 268.51deg);
   font-weight: 500;
 }
 html.dark-mode table thead {
-  background-color: #333;
+  background-color: oklch(30.1% 0.017 266.38deg);
 }
 table td, table th {
   min-width: 10px;
   padding: 6px 8px;
-  border: 1px solid #DDD;
+  border: 1px solid;
+  border-color: oklch(76.7% 0.024 269.39deg);
   overflow: auto;
   line-height: 1.2;
   word-break: break-word;
   vertical-align: top;
 }
+html.dark-mode table td, html.dark-mode table th {
+  border-color: oklch(53.5% 0.031 267.28deg);
+}
+table td {
+  padding: 10px;
+}
 table td p, table th p {
   margin: 0;
+}
+table tr:nth-child(even) {
+  background-color: oklch(95.8% 0.003 264.69deg);
+}
+html.dark-mode table tr:nth-child(even) {
+  background-color: oklch(45.6% 0.026 265.53deg);
 }
 
 table.table {
@@ -668,73 +692,73 @@ table.list-table td {
  * Page Content
  * Styles specific to blocks used within page content.
  */
-.page-content:not(#tinymce) {
+.page-content {
   width: 100%;
-  max-width: 840px;
+  max-width: 940px;
   margin: 0 auto;
   overflow-wrap: break-word;
   position: relative;
 }
-.page-content:not(#tinymce) .align-left {
+.page-content .align-left {
   text-align: left;
 }
-.page-content:not(#tinymce) img.align-left, .page-content:not(#tinymce) table.align-left, .page-content:not(#tinymce) iframe.align-left, .page-content:not(#tinymce) video.align-left {
+.page-content img.align-left, .page-content table.align-left, .page-content iframe.align-left, .page-content video.align-left {
   float: left !important;
   margin: 6px 16px 16px 0;
 }
-.page-content:not(#tinymce) .align-right {
+.page-content .align-right {
   text-align: right !important;
 }
-.page-content:not(#tinymce) img.align-right, .page-content:not(#tinymce) table.align-right, .page-content:not(#tinymce) iframe.align-right, .page-content:not(#tinymce) video.align-right {
+.page-content img.align-right, .page-content table.align-right, .page-content iframe.align-right, .page-content video.align-right {
   float: right !important;
   margin: 6px 0 6px 12px;
 }
-.page-content:not(#tinymce) .align-center {
+.page-content .align-center {
   text-align: center;
 }
-.page-content:not(#tinymce) img.align-center, .page-content:not(#tinymce) video.align-center, .page-content:not(#tinymce) iframe.align-center {
+.page-content img.align-center, .page-content video.align-center, .page-content iframe.align-center {
   display: block;
 }
-.page-content:not(#tinymce) img.align-center, .page-content:not(#tinymce) table.align-center, .page-content:not(#tinymce) iframe.align-center, .page-content:not(#tinymce) video.align-center {
+.page-content img.align-center, .page-content table.align-center, .page-content iframe.align-center, .page-content video.align-center {
   margin-left: auto;
   margin-right: auto;
 }
-.page-content:not(#tinymce) .align-justify {
+.page-content .align-justify {
   text-align: justify;
 }
-.page-content:not(#tinymce) h1, .page-content:not(#tinymce) h2, .page-content:not(#tinymce) h3, .page-content:not(#tinymce) h4, .page-content:not(#tinymce) h5, .page-content:not(#tinymce) h6, .page-content:not(#tinymce) pre {
+.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content pre {
   clear: left;
 }
-.page-content:not(#tinymce) hr {
+.page-content hr {
   clear: both;
   margin: 16px 0;
 }
-.page-content:not(#tinymce) table {
+.page-content table {
   hyphens: auto;
   table-layout: fixed;
   max-width: 100%;
   height: auto !important;
 }
-.page-content:not(#tinymce) ins,
-.page-content:not(#tinymce) del {
+.page-content ins,
+.page-content del {
   text-decoration: none;
 }
-.page-content:not(#tinymce) ins {
+.page-content ins {
   background: #dbffdb;
 }
-.page-content:not(#tinymce) del {
+.page-content del {
   background: #FFECEC;
 }
-.page-content:not(#tinymce) details {
+.page-content details {
   border: 1px solid;
   border-color: #DDD;
   margin-bottom: 1em;
   padding: 12px;
 }
-html.dark-mode .page-content:not(#tinymce) details {
+html.dark-mode .page-content details {
   border-color: #555;
 }
-.page-content:not(#tinymce) details > summary {
+.page-content details > summary {
   margin-top: -12px;
   margin-left: -12px;
   margin-right: -12px;
@@ -743,42 +767,42 @@ html.dark-mode .page-content:not(#tinymce) details {
   background-color: #EEE;
   padding: 6px 12px;
 }
-html.dark-mode .page-content:not(#tinymce) details > summary {
+html.dark-mode .page-content details > summary {
   background-color: #333;
 }
-.page-content:not(#tinymce) details[open] > summary {
+.page-content details[open] > summary {
   margin-bottom: 12px;
   border-bottom: 1px solid;
   border-color: #DDD;
 }
-html.dark-mode .page-content:not(#tinymce) details[open] > summary {
+html.dark-mode .page-content details[open] > summary {
   border-color: #555;
 }
-.page-content:not(#tinymce) details > summary + * {
+.page-content details > summary + * {
   margin-top: 0.2em;
 }
-.page-content:not(#tinymce) details:after {
+.page-content details:after {
   content: "";
   display: block;
   clear: both;
 }
-.page-content:not(#tinymce) li > input[type=checkbox] {
+.page-content li > input[type=checkbox] {
   vertical-align: top;
   margin-top: 0.3em;
 }
-.page-content:not(#tinymce) p:empty {
+.page-content p:empty {
   min-height: 1.6em;
 }
-.page-content:not(#tinymce).page-revision pre code {
+.page-content.page-revision pre code {
   white-space: pre-wrap;
 }
-.page-content:not(#tinymce) .cm-editor {
+.page-content .cm-editor {
   margin-bottom: 1.375em;
 }
-.page-content:not(#tinymce) video, .page-content:not(#tinymce) iframe {
+.page-content video, .page-content iframe {
   max-width: 100%;
 }
-.page-content:not(#tinymce) a {
+.page-content a:hover {
   text-decoration: underline;
 }
 
@@ -786,6 +810,7 @@ body .page-content img,
 .page-content img:not([data-mce-object]) {
   max-width: 100%;
   height: auto;
+  border-radius: 0.375rem;
 }
 
 /**

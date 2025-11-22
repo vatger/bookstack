@@ -5,7 +5,7 @@
  * Background colors
  */
 
-.primary-background:not(hr) {
+.primary-background:not(hr, .popup-header) {
   @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
   //background-color: colors.$color-secondary-50;
 }

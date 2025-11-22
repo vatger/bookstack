@@ -158,12 +158,13 @@ button.icon-list-item {
 }
 
 .button[disabled] {
-  background-color: #BBB;
+  @include mixins.lightDark(background-color, colors.$color-secondary-300, colors.$color-secondary-600);
+  padding: vars.$xs*1.3 vars.$m;
+  color: white;
   cursor: default;
   border-color: #CCC;
   &:hover {
-    background-color: #BBB;
-    cursor: default;
+    cursor: not-allowed;
     box-shadow: none;
   }
 }

@@ -1,4 +1,4 @@
-<div component="page-editor" class="page-editor page-editor-{{ $editor }} flex-fill flex"
+<div component="page-editor" class="page-editor  page-editor-{{ $editor }} flex-fill flex"
      option:page-editor:drafts-enabled="{{ $draftsEnabled ? 'true' : 'false' }}"
      @if(config('services.drawio'))
         drawio-url="{{ is_string(config('services.drawio')) ? config('services.drawio') : 'https://embed.diagrams.net/?embed=1&proto=json&spin=1&configure=1' }}"

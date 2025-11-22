@@ -132,17 +132,19 @@ $loadingSize: 10px;
 }
 
 .entity-selector {
-  border: 1px solid #DDD;
   @include mixins.lightDark(border-color, #ddd, #111);
-  border-radius: 3px;
   overflow: hidden;
   font-size: 0.8em;
   input[type="text"] {
+    @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900, true);
     width: 100%;
     display: block;
     border-radius: 0;
-    border: 0;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    @include mixins.lightDark(border-color, colors.$color-secondary-200, colors.$color-secondary-700);
     font-size: 16px;
     padding: vars.$s vars.$m;
   }
@@ -154,7 +156,7 @@ $loadingSize: 10px;
   .entity-list {
     overflow-y: scroll;
     height: 400px;
-    @include mixins.lightDark(background-color, #eee, #222);
+    @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-800);
     margin-inline-end: 0;
     margin-inline-start: 0;
   }

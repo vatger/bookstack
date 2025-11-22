@@ -253,12 +253,11 @@ header .search-box.search-active:focus-within {
 .logo-image {
   height: 43px;
 }
-
 .mobile-menu-toggle {
-  color: #FFF;
-  fill: #FFF;
+  color: var(--color-primary);
+  fill: var(--color-primary);
   font-size: 2em;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--color-primary);
   border-radius: 4px;
   padding: 0 vars.$xs;
   line-height: 1;
@@ -274,7 +273,7 @@ header .search-box.search-active:focus-within {
 
 @include mixins.smaller-than(vars.$bp-l) {
   header .header-links {
-    @include mixins.lightDark(background-color, #fff, #333);
+    @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900);
     display: none;
     z-index: 10;
     inset-inline-end: vars.$m;
@@ -283,12 +282,22 @@ header .search-box.search-active:focus-within {
     position: absolute;
     box-shadow: vars.$bs-hover;
     margin-top: vars.$m;
-    padding: vars.$xs 0;
 
     &.show {
       display: block;
     }
+
+    a {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      @include mixins.lightDark(border-bottom-color, colors.$color-secondary-100, colors.$color-secondary-800);
+    }
+
+    .dropdown-container {
+      padding: 0;
+    }
   }
+
   header .links a, header .dropdown-container ul li a, header .dropdown-container ul li button {
     text-align: start;
     display: grid;
@@ -340,26 +349,26 @@ header .search-box.search-active:focus-within {
   top: 0;
   z-index: 5;
   background-color: #FFF;
-  border-bottom: 1px solid #DDD;
-  @include mixins.lightDark(border-bottom-color, #DDD, #333);
   box-shadow: vars.$bs-card;
 }
 
 .tri-layout-mobile-tab {
   text-align: center;
   border-bottom: 3px solid #BBB;
+  font-weight: 600;
+  color: var(--color-primary);
   cursor: pointer;
   margin: 0;
-  @include mixins.lightDark(background-color, #FFF, #222);
-  @include mixins.lightDark(border-bottom-color, #BBB, #333);
+  @include mixins.lightDark(background-color, #FFF, colors.$color-secondary-800);
+  @include mixins.lightDark(border-bottom-color, colors.$color-secondary-100, colors.$color-secondary-700);
 
   &:first-child {
-    border-inline-end: 1px solid #DDD;
-    @include mixins.lightDark(border-inline-end-color, #DDD, #000);
+    border-inline-end: 1px solid;
+    @include mixins.lightDark(border-inline-end-color, colors.$color-secondary-100, colors.$color-secondary-700);
   }
 
   &[aria-selected="true"] {
-    border-bottom-color: currentColor !important;
+    border-bottom-color: colors.$color-accent-500 !important;
   }
 }
 

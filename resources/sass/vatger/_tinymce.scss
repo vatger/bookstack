@@ -146,7 +146,7 @@ body.page-content.mce-content-body  {
 #tinymce {
   min-height: 100%;
   @include mixins.lightDark(background, #FFF, colors.$color-secondary-800, true);
-  @include mixins.lightDark(color, colors.$color-primary-900, colors.$color-primary-50, true);
+  @include mixins.lightDark(color, colors.$color-primary-900, colors.$color-secondary-200, true);
 }
 
 div.input[refs="page-editor@titleContainer"] {
@@ -158,9 +158,24 @@ html.dark-mode .page-editor-page-area {
   border: 1px solid colors.$color-secondary-800;
 }
 
-#tinymce * {
+#tinymce {
+  max-width: 100%;
+}
+
+#tinymce *:not(table) {
   margin-inline: auto;
-  max-width: 840px;
+}
+
+#tinymce * {
+  max-width: 940px;
+}
+
+#tinymce img {
+  @include mixins.larger-than(vars.$bp-l) {
+    max-width: 940px;
+  }
+
+  max-width: 100%;
 }
 
 

@@ -13,5 +13,4 @@
 
     @default
         <p>Error: unknown entity type: "{{$entity_type}}"</p>
-        @break
 @endswitch

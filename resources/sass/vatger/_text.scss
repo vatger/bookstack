@@ -9,11 +9,11 @@
  */
 
 body, button, input, select, label, textarea {
-  font-family: var(--font-body);
+  font-family: var(--font-body), serif;
 }
 
 pre, #markdown-editor-input, .text-mono, .code-base {
-  font-family: var(--font-code);
+  font-family: var(--font-code), serif;
 }
 
 /*
@@ -21,19 +21,19 @@ pre, #markdown-editor-input, .text-mono, .code-base {
  */
 
 h1 {
-  @include tailwind.text-6xl();
+  @include tailwind.text-4xl();
   margin-top: 0.48888889em;
   margin-bottom: 0.48888889em;
 }
 
 h2 {
-  @include tailwind.text-5xl();
+  @include tailwind.text-3xl();
   margin-top: 0.8627451em;
   margin-bottom: 0.43137255em;
 }
 
 h3 {
-  @include tailwind.text-4xl();
+  @include tailwind.text-2xl();
   margin-top: 0.78571429em;
   margin-bottom: 0.43137255em;
 }
@@ -45,10 +45,10 @@ h4 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   display: block;
-  font-family: var(--font-heading, var(--font-body));
+  font-family: var(--font-heading, var(--font-body)), serif;
   color: var(--color-primary);
 }
 
@@ -89,14 +89,15 @@ h5, h6 {
 //  @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
 //}
 
-.card .list-heading, h1#bkmrk-page-title {
+.card h1.list-heading, h1#bkmrk-page-title {
   @include tailwind.text-5xl();
   @include mixins.lightDark(color, var(--color-primary), colors.$color-primary-50);
   font-weight: bold;
 }
 
-h2.list-heading {
-  font-size: 1.333rem;
+.card h2.list-heading {
+  @include tailwind.text-3xl();
+  margin-top: 1rem;
 }
 
 /*
@@ -235,9 +236,10 @@ blockquote {
   display: block;
   position: relative;
   border-left: 4px solid transparent;
-  border-left-color: var(--color-primary);
-  @include mixins.lightDark(background-color, #f8f8f8, #333);
-  padding: vars.$s vars.$m vars.$s vars.$xl;
+  border-left-color: colors.$color-accent-500;
+  @include mixins.lightDark(background-color, colors.$color-secondary-50, colors.$color-secondary-900);
+  border-radius: vars.$dropdown-border-radius;
+  padding: vars.$m vars.$m vars.$m vars.$xl;
   overflow: auto;
 
   &:before {
@@ -245,9 +247,19 @@ blockquote {
     font-size: 2em;
     font-weight: bold;
     position: absolute;
-    top: vars.$s;
+    top: 10px;
     left: vars.$s;
-    color: #777;
+    color: colors.$color-accent-500;
+  }
+
+  :last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  :first-child {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 

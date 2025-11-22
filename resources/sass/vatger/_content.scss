@@ -7,9 +7,9 @@
  * Styles specific to blocks used within page content.
  */
 
-.page-content:not(#tinymce) {
+.page-content {
   width: 100%;
-  max-width: 840px;
+  max-width: 940px;
   margin: 0 auto;
   overflow-wrap: break-word;
   position: relative;
@@ -135,7 +135,7 @@
     max-width: 100%;
   }
 
-  a {
+  a:hover {
     text-decoration: underline;
   }
 }
@@ -148,6 +148,7 @@ body .page-content img,
 .page-content img:not([data-mce-object]) {
   max-width: 100%;
   height: auto;
+  border-radius: vars.$dropdown-border-radius;
 }
 
 /**

@@ -414,7 +414,10 @@ body.flexbox {
     }
   }
   .tri-layout-middle-contents {
-    max-width: 940px;
+    @include mixins.smaller-than(vars.$bp-xxxl) {
+      max-width: 940px;
+    }
+    max-width: 1040px;
     margin: 0 auto;
   }
 }
