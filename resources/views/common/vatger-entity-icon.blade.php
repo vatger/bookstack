@@ -7,6 +7,10 @@
        <i class="svg-icon" data-lucide="file-text"></i>
        @break
 
+    @case('chapter')
+        <i class="svg-icon" data-lucide="table-of-contents"></i>
+        @break
+
     @case('bookshelf')
         <i class="svg-icon" data-lucide="library-big"></i>
         @break
