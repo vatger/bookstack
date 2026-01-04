@@ -206,6 +206,8 @@
     border-radius: 0 3px 3px 0;
     padding-inline-end: 0;
 
+    border-radius: vars.$header-link-border-radius;
+
     .content {
       width: 100%;
       padding-top: vars.$xs;
@@ -529,6 +531,7 @@ ul.pagination {
   width: 100%;
   position: relative;
   word-break: break-word;
+  border-radius: vars.$header-link-border-radius;
 
   h4 a {
     color: #666;
@@ -555,7 +558,6 @@ ul.pagination {
   &:not(.no-hover):hover {
     @include mixins.lightDark(background-color, rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
     text-decoration: none;
-    border-radius: vars.$header-link-border-radius;
   }
 
   &.outline-hover:hover {

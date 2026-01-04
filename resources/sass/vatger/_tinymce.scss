@@ -171,11 +171,11 @@ html.dark-mode .page-editor-page-area {
 }
 
 #tinymce img {
+  max-width: 100%;
+
   @include mixins.larger-than(vars.$bp-l) {
     max-width: 940px;
   }
-
-  max-width: 100%;
 }
 
 

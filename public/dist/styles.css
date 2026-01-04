@@ -6729,6 +6729,7 @@ html[dir=rtl] .sidebar-page-nav .sidebar-page-nav-bullet {
   background-clip: content-box;
   border-radius: 0 3px 3px 0;
   padding-inline-end: 0;
+  border-radius: 0.5rem;
 }
 .book-tree .sidebar-page-list .entity-list-item .content {
   width: 100%;
@@ -7038,6 +7039,7 @@ html.dark-mode ul.pagination li.active span {
   width: 100%;
   position: relative;
   word-break: break-word;
+  border-radius: 0.5rem;
 }
 .entity-list-item h4 a, .icon-list-item h4 a {
   color: #666;
@@ -7059,7 +7061,6 @@ html.dark-mode ul.pagination li.active span {
 .entity-list-item:not(.no-hover):hover, .icon-list-item:not(.no-hover):hover {
   background-color: rgba(0, 0, 0, 0.06);
   text-decoration: none;
-  border-radius: 0.5rem;
 }
 html.dark-mode .entity-list-item:not(.no-hover):hover, html.dark-mode .icon-list-item:not(.no-hover):hover {
   background-color: rgba(255, 255, 255, 0.06);
