@@ -754,6 +754,8 @@ table.list-table td {
   border-color: #DDD;
   margin-bottom: 1em;
   padding: 12px;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 html.dark-mode .page-content details {
   border-color: #555;
@@ -830,6 +832,7 @@ body .page-content img,
   display: block;
   position: relative;
   overflow: auto;
+  border-radius: 0.5rem;
 }
 .callout:before {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiMwMTUzODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4gICAgPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTEgMTVoLTJ2LTZoMnY2em0wLThoLTJWN2gydjJ6Ii8+PC9zdmc+");
