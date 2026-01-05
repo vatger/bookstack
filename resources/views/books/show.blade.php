@@ -17,7 +17,7 @@
 
 @section('body')
 
-    <div class="mb-s print-hidden">
+    <div class="mb-m print-hidden">
         @include('entities.breadcrumbs', ['crumbs' => [
             $book,
         ]])
