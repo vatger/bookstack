@@ -129,7 +129,7 @@ class ConnectController extends Controller
             // Add role to new user (default role = viewer)
             DB::table('role_user')->insert([
                 'user_id' => $user->id,
-                'role_id' => 4
+                'role_id' => 3
             ]);
 
             // If the user has given us permanent access to the data
